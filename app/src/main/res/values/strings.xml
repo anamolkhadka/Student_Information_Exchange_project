@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Student_Information_Exchange_app</string>
+    <string name="app_name">Student Information Exchange</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password_string">Password</string>
+    <string name="login_button_text">Login</string>
+    <string name="are_you_registered_with_us_text">Are you registered with us?</string>
+    <string name="don_t_have_an_account_text">Don\'t have an account ?</string>
+    <string name="sign_up_link_text">Sign up</string>
 </resources>
