@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Add or Remove Cards" />
+        app:title="Link or Unlink Banks" />
 
     <LinearLayout
         android:id="@+id/page"
@@ -38,26 +38,41 @@
             android:layout_height="19dp" />
 
         <TextView
-            android:id="@+id/add_head"
+            android:id="@+id/link_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Add a Card"
+            android:text=" Link a Bank"
             android:textAlignment="viewStart"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
         <View
-            android:id="@+id/add_div"
+            android:id="@+id/link_div"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="?android:attr/listDivider" />
 
-        <Spinner
-            android:id="@+id/card_name"
+        <LinearLayout
+            android:id="@+id/add_opt1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:contentDescription="Bank Provider" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:contentDescription="Bank Provider" />
+
+            <Spinner
+                android:id="@+id/acc_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:contentDescription="Account Type" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/add_opt2"
@@ -66,63 +81,55 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/card_num"
-                android:layout_width="180dp"
-                android:layout_height="match_parent">
+                android:id="@+id/rout_num"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Card Number" />
+                    android:layout_height="match_parent"
+                    android:hint="Routing Number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/card_csv"
-                android:layout_width="100dp"
-                android:layout_height="match_parent">
+                android:id="@+id/acc_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="CSV" />
+                    android:layout_height="match_parent"
+                    android:hint="Account Number" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <EditText
-                android:id="@+id/card_expiry"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:inputType="date"
-                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/ac_submit"
+            android:id="@+id/lb_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submit" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="71dp" />
+            android:layout_height="73dp" />
 
         <TextView
-            android:id="@+id/rev_head"
+            android:id="@+id/ul_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Linked Cards"
+            android:text=" Linked Banks"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
         <View
-            android:id="@+id/rev_div"
+            android:id="@+id/ul_div"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="?android:attr/listDivider" />
 
         <ScrollView
-            android:id="@+id/trans_list"
+            android:id="@+id/bank_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -139,33 +146,30 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/lc_name"
+                        android:id="@+id/lb_name"
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bank" />
+
+                    <TextView
+                        android:id="@+id/lb_type"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Provider" />
+                        android:text="Checking" />
 
                     <TextView
-                        android:id="@+id/lc_type"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Credit" />
-
-                    <TextView
-                        android:id="@+id/lc_num"
+                        android:id="@+id/lb_num"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="####1000" />
 
                     <Button
-                        android:id="@+id/lc_remove"
+                        android:id="@+id/lb_unlink"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Remove" />
-
+                        android:text="Unlink" />
                 </LinearLayout>
 
             </LinearLayout>

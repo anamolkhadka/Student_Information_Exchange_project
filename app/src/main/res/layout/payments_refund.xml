@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Add or Remove Cards" />
+        app:title="Request a Refund" />
 
     <LinearLayout
         android:id="@+id/page"
@@ -28,95 +28,25 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/btm_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mng_toolbar"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/mng_toolbar">
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="19dp" />
 
         <TextView
-            android:id="@+id/add_head"
+            android:id="@+id/trans_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Add a Card"
+            android:text=" Select Transaction"
             android:textAlignment="viewStart"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
         <View
-            android:id="@+id/add_div"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="?android:attr/listDivider" />
-
-        <Spinner
-            android:id="@+id/card_name"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:contentDescription="Bank Provider" />
-
-        <LinearLayout
-            android:id="@+id/add_opt2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/card_num"
-                android:layout_width="180dp"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Card Number" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/card_csv"
-                android:layout_width="100dp"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="CSV" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <EditText
-                android:id="@+id/card_expiry"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:inputType="date"
-                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/ac_submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Submit" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="71dp" />
-
-        <TextView
-            android:id="@+id/rev_head"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" Linked Cards"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <View
-            android:id="@+id/rev_div"
+            android:id="@+id/trans_div"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="?android:attr/listDivider" />
@@ -124,7 +54,7 @@
         <ScrollView
             android:id="@+id/trans_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="198dp">
 
             <LinearLayout
                 android:id="@+id/list"
@@ -138,39 +68,79 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
+                    <RadioButton
+                        android:id="@+id/tc_choice"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
                     <TextView
-                        android:id="@+id/lc_name"
+                        android:id="@+id/tc_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Card" />
+
+                    <TextView
+                        android:id="@+id/tc_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Provider" />
 
                     <TextView
-                        android:id="@+id/lc_type"
+                        android:id="@+id/tc_num"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Credit" />
+                        android:text="Card" />
 
                     <TextView
-                        android:id="@+id/lc_num"
+                        android:id="@+id/tc_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="####1000" />
-
-                    <Button
-                        android:id="@+id/lc_remove"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Remove" />
+                        android:text="xx/xx/xx" />
 
                 </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="26dp" />
+
+        <TextView
+            android:id="@+id/rsn_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Reason for Refund"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/rsn_div"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider" />
+
+        <EditText
+            android:id="@+id/rsn_text"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Explanation"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/rsn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
     </LinearLayout>
 
     <androidx.appcompat.widget.Toolbar

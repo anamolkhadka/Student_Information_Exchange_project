@@ -12,7 +12,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
-        android:text="Cards"
+        android:text="Bank Cards"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
         android:text="Request Refund"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintBottom_toTopOf="@+id/btm_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/btm_toolbar"
         android:layout_width="413dp"
         android:layout_height="59dp"
         android:background="?attr/colorPrimary"
@@ -135,7 +135,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintBottom_toTopOf="@+id/btm_toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
         tools:srcCompat="@tools:sample/avatars" />
@@ -144,7 +144,7 @@
         android:layout_width="413dp"
         android:layout_height="593dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintBottom_toTopOf="@+id/btm_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mng_toolbar"></LinearLayout>
