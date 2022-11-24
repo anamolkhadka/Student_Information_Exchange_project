@@ -11,6 +11,7 @@ class RegistrationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registration)
 
         configureLoginButton()
+        configureHomeScreenButton()
 
         ////title= "Registration" , for setting up title for the activity page
     }
@@ -20,6 +21,14 @@ class RegistrationActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             val nextPage = Intent(this, MainActivity::class.java)
             startActivity(nextPage)
+        }
+    }
+    ///Navigating to the Home screen page
+    private fun configureHomeScreenButton(){
+        val homepageButton: Button = findViewById(R.id.home_screen_link_btn)
+        homepageButton.setOnClickListener {
+            val homepage = Intent(this,HomePageActivity::class.java)
+            startActivity(homepage)
         }
     }
 }
