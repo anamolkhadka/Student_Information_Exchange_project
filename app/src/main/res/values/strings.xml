@@ -3,8 +3,26 @@
     <string name="sign_in">Sign in</string>
     <string name="email">Email</string>
     <string name="password_string">Password</string>
+    <string name="repeat_password_string">Repeat password</string>
     <string name="login_button_text">Login</string>
     <string name="are_you_registered_with_us_text">Are you registered with us?</string>
     <string name="don_t_have_an_account_text">Don\'t have an account ?</string>
     <string name="sign_up_link_text">Sign up</string>
+    <string name="first_name_signup">First Name</string>
+    <string name="last_name_signup">Last Name</string>
+    <string name="register_button_text">Register</string>
+    <string name="already_have_an_account_text">Already have an account?</string>
+    <string name="login_text">Login</string>
+    <string name="create_account_text">Create account</string>
+    <string name="back_to_home_screen_text">Back to Home Screen</string>
+    <string name="home_text">Home</string>
+    <string name="register_text">Register</string>
+    <string name="message_text">Message</string>
+    <string name="form_clubs_text">Form Clubs</string>
+    <string name="tutoring_services_text">Tutoring\nServices</string>
+    <string name="advertisement_text">Advertisement</string>
+    <string name="information_exchange_text">Information\nExchange</string>
+    <string name="payments_text">Payments</string>
+    <string name="buy_amp_sell_text"><![CDATA[Buy&Sell]]></string>
+    <string name="space_for_the_search_bar_text">Space for the Search bar</string>
 </resources>

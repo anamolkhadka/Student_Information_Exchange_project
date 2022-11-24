@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+    <!--Input text for the First Name  -->
+
+    <TextView
+        android:id="@+id/register_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/create_account_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/first_name_signup"
+        android:layout_width="300dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_text"
+        android:hint="@string/first_name_signup">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/first_name_signup_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColorHint="#616161"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Input text for the Last Name  -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/last_name_signup"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_name_signup"
+        android:hint="@string/last_name_signup">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/last_name_signup_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColorHint="#616161"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Input text for the email  -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_sign_up"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_name_signup"
+        android:hint="@string/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_sign_up_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#616161"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Password for the email  -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_password_signup"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_sign_up"
+        android:hint="@string/password_string">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_password_signup_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Repeat Password for the email  -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_repeat_password_signup"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_password_signup"
+        android:hint="@string/repeat_password_string">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_repeat_password_signup_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Register button -->
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_button_text"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/input_repeat_password_signup"
+        app:layout_constraintTop_toBottomOf="@id/input_repeat_password_signup"/>
+
+    <TextView
+        android:id="@+id/register_question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/already_have_an_account_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/input_repeat_password_signup"
+        app:layout_constraintTop_toBottomOf="@id/register_button" />
+
+    <Button
+        android:id="@+id/login_link_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/login_text"
+        android:textAllCaps="false"
+        android:textColor="@color/indigo_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/input_repeat_password_signup"
+        app:layout_constraintTop_toBottomOf="@id/register_question_text"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
