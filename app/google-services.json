@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "482661467916",
+    "project_id": "sie-android-application",
+    "storage_bucket": "sie-android-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482661467916:android:1d260cae399e9d0be96b29",
+        "android_client_info": {
+          "package_name": "com.example.student_information_exchange_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482661467916-3qblaf2t1v9906g1b4l26blt6kb1ce4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgWp1DUzii-Ddp_SlUpv5D3rQBVJbvS4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482661467916-3qblaf2t1v9906g1b4l26blt6kb1ce4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
