@@ -6,7 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".RegistrationActivity">
 
-    <!--Input text for the First Name  -->
+    <!-- Back to HomeScreen button -->
+    <Button
+        android:id="@+id/home_screen_link_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/back_to_home_screen_text"
+        android:textAllCaps="false"
+        android:textColor="@color/indigo_dark"
+        android:textSize="10sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/register_text"
@@ -22,6 +35,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
 
+    <!--Input text for the First Name  -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/first_name_signup"
         android:layout_width="300dp"

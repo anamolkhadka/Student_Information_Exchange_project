@@ -25,4 +25,6 @@
     <string name="payments_text">Payments</string>
     <string name="buy_amp_sell_text"><![CDATA[Buy&Sell]]></string>
     <string name="space_for_the_search_bar_text">Space for the Search bar</string>
+    <string name="logout_text">Logout</string>
+    <string name="dashboard_text">DashBoard</string>
 </resources>
