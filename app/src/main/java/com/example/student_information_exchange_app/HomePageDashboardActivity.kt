@@ -23,6 +23,7 @@ class HomePageDashboardActivity : AppCompatActivity() {
 
         configureLogoutButton()
         displayUserEmail()
+        configureBuyAndSellButton()
 
     }
     ///Logging out the user and sending to the login page
@@ -48,6 +49,15 @@ class HomePageDashboardActivity : AppCompatActivity() {
             }
 
         }
+    }
+    ///Handling the Buy and sell Activity from the Dashboard
+    private fun configureBuyAndSellButton() {
+        val buyAndSellButton: Button = findViewById(R.id.dashboard_trade_button)
+        buyAndSellButton.setOnClickListener {
+            val buyAndSellPage = Intent(this,BuyAndSellActivity::class.java)
+            startActivity(buyAndSellPage)
+        }
+
     }
 
 

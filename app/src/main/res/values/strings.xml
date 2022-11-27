@@ -27,4 +27,5 @@
     <string name="space_for_the_search_bar_text">Space for the Search bar</string>
     <string name="logout_text">Logout</string>
     <string name="dashboard_text">DashBoard</string>
+    <string name="this_is_market_place_for_buy_and_sell_text">This is Market place for Buy and Sell</string>
 </resources>

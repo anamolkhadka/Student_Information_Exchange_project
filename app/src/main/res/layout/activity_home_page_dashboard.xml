@@ -64,7 +64,7 @@ tools:context=".HomePageDashboardActivity">
 
         <!-- Register Button And Icon -->
         <Button
-            android:id="@+id/home_screen_register_button"
+            android:id="@+id/dashboard_register_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -81,14 +81,14 @@ tools:context=".HomePageDashboardActivity">
             android:layout_height="100dp"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/register_icon"
-            app:layout_constraintStart_toStartOf="@id/home_screen_register_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_register_button"
             app:layout_constraintTop_toBottomOf="@id/userEmail_text"
             android:layout_marginTop="70dp"
             android:layout_marginStart="5dp"/>
 
         <!-- Communication Button And Icon -->
         <Button
-            android:id="@+id/home_screen_chat_button"
+            android:id="@+id/dashboard_chat_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="50dp"
@@ -105,21 +105,21 @@ tools:context=".HomePageDashboardActivity">
             android:layout_height="100dp"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/message_icon"
-            app:layout_constraintStart_toStartOf="@id/home_screen_chat_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_chat_button"
             app:layout_constraintTop_toBottomOf="@id/userEmail_text"
             android:layout_marginTop="70dp"
             android:layout_marginStart="5dp"/>
 
         <!-- Buy and Sell  Button And Icon -->
         <Button
-            android:id="@+id/home_screen_trade_button"
+            android:id="@+id/dashboard_trade_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/indigo"
             android:text="@string/buy_amp_sell_text"
             android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="@id/home_screen_register_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_register_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_register_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_register_button"
             android:layout_marginTop="110dp"/>
 
         <ImageView
@@ -128,21 +128,21 @@ tools:context=".HomePageDashboardActivity">
             android:layout_height="100dp"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/shop_icon"
-            app:layout_constraintStart_toStartOf="@id/home_screen_trade_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_register_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_trade_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_register_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"/>
 
         <!-- Form Club Button And Icon -->
         <Button
-            android:id="@+id/home_screen_formClub_button"
+            android:id="@+id/dashboard_formClub_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/indigo"
             android:text="@string/form_clubs_text"
             android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="@id/home_screen_chat_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_chat_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_chat_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_chat_button"
             android:layout_marginTop="110dp"/>
 
         <ImageView
@@ -151,21 +151,21 @@ tools:context=".HomePageDashboardActivity">
             android:layout_height="100dp"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/form_club_icon"
-            app:layout_constraintStart_toStartOf="@id/home_screen_formClub_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_chat_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_formClub_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_chat_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"/>
 
         <!-- Tutoring Service Button And Icon -->
         <Button
-            android:id="@+id/home_screen_tutoring_button"
+            android:id="@+id/dashboard_tutoring_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/indigo"
             android:text="@string/tutoring_services_text"
             android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="@id/home_screen_register_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_trade_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_register_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_trade_button"
             android:layout_marginTop="110dp"/>
 
         <ImageView
@@ -174,22 +174,22 @@ tools:context=".HomePageDashboardActivity">
             android:layout_height="100dp"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/tutoring_icon"
-            app:layout_constraintStart_toStartOf="@id/home_screen_tutoring_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_trade_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_tutoring_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_trade_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"/>
 
         <!-- Info exchange Button And Icon -->
         <Button
-            android:id="@+id/home_screen_infoExchange_button"
+            android:id="@+id/dashboard_infoExchange_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
             android:backgroundTint="@color/indigo"
             android:text="@string/information_exchange_text"
             android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="@id/home_screen_formClub_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_formClub_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_formClub_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_formClub_button"
             android:layout_marginTop="110dp"/>
 
         <ImageView
@@ -198,22 +198,22 @@ tools:context=".HomePageDashboardActivity">
             android:layout_height="100dp"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/info_exchange_icon"
-            app:layout_constraintStart_toStartOf="@id/home_screen_infoExchange_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_formClub_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_infoExchange_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_formClub_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"/>
 
         <!-- Advertisement Button And Icon -->
         <Button
-            android:id="@+id/home_screen_advertisement_button"
+            android:id="@+id/dashboard_advertisement_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/indigo"
             android:importantForAccessibility="no"
             android:text="@string/advertisement_text"
             android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="@id/home_screen_tutoring_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_tutoring_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_tutoring_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_tutoring_button"
             android:layout_marginTop="110dp"/>
 
         <ImageView
@@ -222,21 +222,21 @@ tools:context=".HomePageDashboardActivity">
             android:layout_height="100dp"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/advertisement_icon"
-            app:layout_constraintStart_toStartOf="@id/home_screen_advertisement_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_tutoring_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_advertisement_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_tutoring_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"/>
 
         <!-- Payments Button And Icon -->
         <Button
-            android:id="@+id/home_screen_payments_button"
+            android:id="@+id/dashboard_payments_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/indigo"
             android:text="@string/payments_text"
             android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="@id/home_screen_infoExchange_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_infoExchange_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_infoExchange_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_infoExchange_button"
             android:layout_marginTop="110dp"/>
 
         <ImageView
@@ -245,8 +245,8 @@ tools:context=".HomePageDashboardActivity">
             android:layout_height="100dp"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/payments_icon"
-            app:layout_constraintStart_toStartOf="@id/home_screen_payments_button"
-            app:layout_constraintTop_toBottomOf="@id/home_screen_infoExchange_button"
+            app:layout_constraintStart_toStartOf="@id/dashboard_payments_button"
+            app:layout_constraintTop_toBottomOf="@id/dashboard_infoExchange_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"/>
 

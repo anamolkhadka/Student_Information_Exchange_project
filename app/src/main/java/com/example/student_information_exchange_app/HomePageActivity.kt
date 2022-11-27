@@ -12,6 +12,7 @@ class HomePageActivity : AppCompatActivity() {
 
         configureLoginButton()
         configureRegisterButton()
+        configureBuyAndSellButton()
 
     }
     ///Navigating to the login page
@@ -28,6 +29,14 @@ class HomePageActivity : AppCompatActivity() {
         registerButton.setOnClickListener {
             val registrationPage = Intent(this,RegistrationActivity::class.java)
             startActivity(registrationPage)
+        }
+    }
+    ///handling buy and sell from the HomeScreen page where the user is not logged in.
+    private fun configureBuyAndSellButton() {
+        val buyAndSellButton: Button = findViewById(R.id.home_screen_trade_button)
+        buyAndSellButton.setOnClickListener {
+            val loginPage = Intent(this, MainActivity::class.java)
+            startActivity(loginPage)
         }
     }
 
