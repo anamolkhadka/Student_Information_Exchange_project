@@ -66,31 +66,19 @@ class RegistrationActivity : AppCompatActivity() {
                     toast.show()
 
                 }else if (passwordField.isEmpty()) {
-                    val text = "Password is required !"
-                    val duration = Toast.LENGTH_LONG
-                    val toast = Toast.makeText(applicationContext, text, duration)
-                    toast.show()
+                    Toast.makeText(applicationContext,"Password is required !",Toast.LENGTH_LONG).show()
 
                 }else if (repeatPasswordField.isEmpty()) {
-                    val text = "Repeat Password is required !"
-                    val duration = Toast.LENGTH_LONG
-                    val toast = Toast.makeText(applicationContext, text, duration)
-                    toast.show()
+                    Toast.makeText(applicationContext,"Repeat Password is required !",Toast.LENGTH_LONG).show()
 
                 }else if (firstnameTextField.isEmpty()) {
-                    val text = "Please enter your first name !"
-                    val duration = Toast.LENGTH_LONG
-                    val toast = Toast.makeText(applicationContext, text, duration)
-                    toast.show()
+                    Toast.makeText(applicationContext,"Please enter your first name !",Toast.LENGTH_LONG).show()
 
                 }
 
             }
             else if(passwordField != repeatPasswordField){
-                val text = "Your second password does not match with the first one !"
-                val duration = Toast.LENGTH_LONG
-                val toast = Toast.makeText(applicationContext, text, duration)
-                toast.show()
+                Toast.makeText(applicationContext,"Your second password does not match with the first one !",Toast.LENGTH_LONG).show()
 
             }
             else {
@@ -105,23 +93,13 @@ class RegistrationActivity : AppCompatActivity() {
                         }else if (!Patterns.EMAIL_ADDRESS.matcher(emailID).matches()){
                             ///If the sign in fails, display the error message to the user.
                             Log.d("User creation",":failed")
-                            val text = "Please enter valid EmailAddress !"
-                            val duration = Toast.LENGTH_LONG
-                            val toast = Toast.makeText(applicationContext, text, duration)
-                            toast.show()
+                            Toast.makeText(applicationContext,"Please enter valid EmailAddress !",Toast.LENGTH_LONG).show()
 
                         }else if(passwordField.length < 6) {
-                            val text = "Weak Password. Minimum 6 characters required!"
-                            val duration = Toast.LENGTH_LONG
-                            val toast = Toast.makeText(applicationContext, text, duration)
-                            toast.show()
+                            Toast.makeText(applicationContext,"Weak Password. Minimum 6 characters required!",Toast.LENGTH_LONG).show()
 
                         }else {
-                            Log.d("Registration",": Unsuccessful")
-                            val text = "Registration Unsuccessful.Try different email !"
-                            val duration = Toast.LENGTH_LONG
-                            val toast = Toast.makeText(applicationContext, text, duration)
-                            toast.show()
+                            Toast.makeText(applicationContext,"Registration Unsuccessful.Try different email !",Toast.LENGTH_LONG).show()
                         }
 
                     }

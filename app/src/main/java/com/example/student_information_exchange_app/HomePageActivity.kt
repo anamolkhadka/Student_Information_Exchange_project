@@ -12,7 +12,11 @@ class HomePageActivity : AppCompatActivity() {
 
         configureLoginButton()
         configureRegisterButton()
+        configureMessageButton()
         configureBuyAndSellButton()
+        configureFormClubButton()
+        configureTutoringButton()
+        configurePaymentsButton()
 
     }
     ///Navigating to the login page
@@ -35,6 +39,38 @@ class HomePageActivity : AppCompatActivity() {
     private fun configureBuyAndSellButton() {
         val buyAndSellButton: Button = findViewById(R.id.home_screen_trade_button)
         buyAndSellButton.setOnClickListener {
+            val loginPage = Intent(this, MainActivity::class.java)
+            startActivity(loginPage)
+        }
+    }
+    ///Handling MessageButton from the HomeScreen page.
+    private fun configureMessageButton() {
+        val messageButton: Button = findViewById(R.id.home_screen_chat_button)
+        messageButton.setOnClickListener {
+            val loginPage = Intent(this, MainActivity::class.java)
+            startActivity(loginPage)
+        }
+    }
+    ///handling form club feature from the HomeScreen page.
+    private fun configureFormClubButton() {
+        val formClubButton: Button = findViewById(R.id.home_screen_formClub_button)
+        formClubButton.setOnClickListener {
+            val loginPage = Intent(this, MainActivity::class.java)
+            startActivity(loginPage)
+        }
+    }
+    ///Handling tutoring feature from the HomeScreen page.
+    private fun configureTutoringButton() {
+        val tutoringButton: Button = findViewById(R.id.home_screen_tutoring_button)
+        tutoringButton.setOnClickListener {
+            val loginPage = Intent(this, MainActivity::class.java)
+            startActivity(loginPage)
+        }
+    }
+    ////Handling the payments module from the HomeScreen where the user is not logged in.
+    private fun configurePaymentsButton() {
+        val paymentsButton: Button = findViewById(R.id.home_screen_payments_button)
+        paymentsButton.setOnClickListener {
             val loginPage = Intent(this, MainActivity::class.java)
             startActivity(loginPage)
         }

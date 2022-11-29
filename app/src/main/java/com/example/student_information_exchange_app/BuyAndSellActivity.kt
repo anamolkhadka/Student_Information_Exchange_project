@@ -8,8 +8,16 @@ class BuyAndSellActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_and_sell)
 
-        title="MarketPlace - Buy & Sell Goods"
+        title="MarketPlace"
+
+        configureSellItemButton()
     }
+
+    private fun configureSellItemButton() {
+
+    }
+
+
 
 
 }
