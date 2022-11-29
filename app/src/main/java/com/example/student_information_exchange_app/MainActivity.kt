@@ -79,19 +79,10 @@ class MainActivity : AppCompatActivity() {
                         }
                         ///If the sign in fails, display the error message to the user.
                         else if(!Patterns.EMAIL_ADDRESS.matcher(emailID).matches()){
-                            Log.d("User sign in", ":failed")
-                            val text = "Please enter valid EmailAddress !"
-                            val duration = Toast.LENGTH_LONG
-                            val toast = Toast.makeText(applicationContext, text, duration)
-                            toast.show()
-
+                            Toast.makeText(applicationContext,"Please enter valid EmailAddress !",Toast.LENGTH_LONG).show()
                         }
                         else {
-                            Log.d("Login",": Unsuccessful")
-                            val text = "Invalid Email or Password !"
-                            val duration = Toast.LENGTH_LONG
-                            val toast = Toast.makeText(applicationContext, text, duration)
-                            toast.show()
+                            Toast.makeText(applicationContext,"Invalid Email or Password !",Toast.LENGTH_LONG).show()
 
                         }
 

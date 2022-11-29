@@ -28,4 +28,15 @@
     <string name="logout_text">Logout</string>
     <string name="dashboard_text">DashBoard</string>
     <string name="this_is_market_place_for_buy_and_sell_text">This is Market place for Buy and Sell</string>
+    <string name="product_name_text">Product Name :</string>
+    <string name="enter_the_name_of_the_item_text">Enter name of the Item</string>
+    <string name="price_text">Price :</string>
+    <string name="enter_the_selling_price_text">Enter Selling Price</string>
+    <string name="description_text">Description :</string>
+    <string name="enter_product_description_text">Enter product description</string>
+    <string name="used_item_text">Used item</string>
+    <string name="new_item_text">New item</string>
+    <string name="what_is_the_condition_of_the_item_text">What is the condition of the item ?</string>
+    <string name="choose_photo_text">Choose Photo</string>
+    <string name="confirm_transaction_text">Confirm transaction</string>
 </resources>

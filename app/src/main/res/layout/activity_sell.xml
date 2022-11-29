@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellActivity">
+
+
+    <TextView
+        android:id="@+id/product_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_name_text"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--- Name of the Item for Sale -->
+    <EditText
+        android:id="@+id/product_name_input"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/product_name_text"
+        app:layout_constraintStart_toEndOf="@+id/product_name_text"
+        app:layout_constraintBottom_toBottomOf="@+id/product_name_text"
+        android:hint="@string/enter_the_name_of_the_item_text"
+        android:autofillHints="auto"/>
+
+    <TextView
+        android:id="@+id/product_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price_text"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/product_name_text"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_text"/>
+
+    <!--- Price of the Item for Sale -->
+    <EditText
+        android:id="@+id/product_price_input"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/product_price_text"
+        app:layout_constraintStart_toEndOf="@+id/product_name_text"
+        app:layout_constraintBottom_toBottomOf="@+id/product_name_text"
+        android:hint="@string/enter_the_selling_price_text"
+        android:autofillHints="auto" />
+
+    <TextView
+        android:id="@+id/product_description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description_text"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/product_price_text"
+        app:layout_constraintTop_toBottomOf="@+id/product_price_text"/>
+
+    <!--- Description of the Item for Sale -->
+    <EditText
+        android:id="@+id/product_description_input"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/product_description_text"
+        app:layout_constraintStart_toStartOf="@+id/product_price_input"
+        app:layout_constraintBottom_toBottomOf="@+id/product_price_input"
+        android:hint="@string/enter_product_description_text"
+        android:autofillHints="auto" />
+
+    <TextView
+        android:id="@+id/item_condition_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/what_is_the_condition_of_the_item_text"
+        app:layout_constraintStart_toStartOf="@+id/product_description_text"
+        app:layout_constraintTop_toBottomOf="@+id/product_description_text"
+        android:layout_marginTop="20dp"/>
+
+
+    <!-- Used or New item Radio buttons -->
+    <RadioGroup
+        android:id="@+id/used_new_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:checkedButton="@id/used_button"
+        app:layout_constraintStart_toStartOf="@+id/product_description_text"
+        app:layout_constraintTop_toBottomOf="@+id/item_condition_question">
+
+        <RadioButton
+            android:id="@+id/used_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/used_item_text"/>
+
+        <RadioButton
+            android:id="@+id/new_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_item_text"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/upload_photo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/product_description_text"
+        app:layout_constraintTop_toBottomOf="@+id/used_new_buttons"
+        android:text="@string/choose_photo_text"/>
+
+    <Button
+        android:id="@+id/confirm_transaction_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/indigo"
+        app:layout_constraintStart_toEndOf="@+id/upload_photo_button"
+        app:layout_constraintTop_toBottomOf="@+id/used_new_buttons"
+        android:text="@string/confirm_transaction_text"/>
+
+    <ProgressBar
+        android:id="@+id/upload_progress_bar"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        app:layout_constraintStart_toStartOf="@+id/upload_photo_button"
+        app:layout_constraintTop_toBottomOf="@+id/upload_photo_button"
+        android:layout_marginTop="8dp" />
+
+    <!-- Image to be uploaded -->
+    <ImageView
+        android:id= "@+id/upload_image_id"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintTop_toBottomOf="@+id/upload_progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
