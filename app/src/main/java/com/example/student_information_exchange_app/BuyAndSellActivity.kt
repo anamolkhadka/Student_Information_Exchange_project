@@ -1,7 +1,9 @@
 package com.example.student_information_exchange_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 
 class BuyAndSellActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,13 +12,21 @@ class BuyAndSellActivity : AppCompatActivity() {
 
         title="MarketPlace"
 
-        configureSellItemButton()
+        configureSellItemsButton()
+        configureBuyItemsButton()
     }
 
-    private fun configureSellItemButton() {
-
+    private fun configureSellItemsButton() {
+        val sellButton: Button = findViewById(R.id.activity_sell_button)
+        sellButton.setOnClickListener {
+            val sellPage = Intent(this,SellActivity::class.java)
+            startActivity(sellPage)
+        }
     }
 
+    private fun configureBuyItemsButton() {
+
+    }
 
 
 

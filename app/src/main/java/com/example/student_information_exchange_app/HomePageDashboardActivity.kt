@@ -64,8 +64,7 @@ class HomePageDashboardActivity : AppCompatActivity() {
     private fun configureBuyAndSellButton() {
         val buyAndSellButton: Button = findViewById(R.id.dashboard_trade_button)
         buyAndSellButton.setOnClickListener {
-            ////Change this from sell to market page later on
-            val buyAndSellPage = Intent(this,SellActivity::class.java)
+            val buyAndSellPage = Intent(this,BuyAndSellActivity::class.java)
             startActivity(buyAndSellPage)
         }
 
