@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -23,6 +24,7 @@ class HomePageDashboardActivity : AppCompatActivity() {
 
         configureLogoutButton()
         displayUserEmail()
+        configureRegisterButton()
         configureBuyAndSellButton()
 
     }
@@ -50,12 +52,19 @@ class HomePageDashboardActivity : AppCompatActivity() {
 
         }
     }
+    ///Handling the register button from the user's dashboard
+    private fun configureRegisterButton(){
+        val registerButton: Button = findViewById(R.id.dashboard_register_button)
+        registerButton.setOnClickListener {
+            Toast.makeText(applicationContext,"Please logout for signing up a new account.",
+                Toast.LENGTH_LONG).show()
+        }
+    }
     ///Handling the Buy and sell Activity from the Dashboard
     private fun configureBuyAndSellButton() {
         val buyAndSellButton: Button = findViewById(R.id.dashboard_trade_button)
         buyAndSellButton.setOnClickListener {
-            ////Change this from sell to market page later on
-            val buyAndSellPage = Intent(this,SellActivity::class.java)
+            val buyAndSellPage = Intent(this,BuyAndSellActivity::class.java)
             startActivity(buyAndSellPage)
         }
 
