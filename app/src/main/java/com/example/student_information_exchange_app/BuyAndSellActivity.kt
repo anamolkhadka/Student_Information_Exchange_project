@@ -10,10 +10,19 @@ class BuyAndSellActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_and_sell)
 
-        title="MarketPlace"
+        title="Market Place"
 
         configureSellItemsButton()
         configureBuyItemsButton()
+        configureBackToDashboardButton()
+    }
+
+    private fun configureBackToDashboardButton() {
+        val backButton: Button = findViewById(R.id.back_dashboard_link_btn)
+        backButton.setOnClickListener {
+            val dashboardPage = Intent(this,HomePageDashboardActivity::class.java)
+            startActivity(dashboardPage)
+        }
     }
 
     private fun configureSellItemsButton() {
@@ -25,7 +34,11 @@ class BuyAndSellActivity : AppCompatActivity() {
     }
 
     private fun configureBuyItemsButton() {
-
+        val buyButton: Button = findViewById(R.id.activity_buy_button)
+        buyButton.setOnClickListener {
+            val marketPage = Intent(this,BuyActivity::class.java)
+            startActivity(marketPage)
+        }
     }
 
 

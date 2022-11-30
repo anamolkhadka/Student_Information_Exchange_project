@@ -41,4 +41,5 @@
     <string name="confirm_transaction_text">Confirm transaction</string>
     <string name="buy_used_nor_n_new_items_text">Buy used\nOr\n New items</string>
     <string name="sell_used_nor_n_new_items_text">Sell USEd\nor\n New items</string>
+    <string name="back_to_dashboard_text">Back to Dashboard</string>
 </resources>
