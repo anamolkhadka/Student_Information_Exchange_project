@@ -5,275 +5,222 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/bm_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Link or Unlink Banks" />
-
     <LinearLayout
-        android:id="@+id/bm_page"
-        android:layout_width="409dp"
-        android:layout_height="591dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
+        android:id="@+id/cm_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btm_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bm_toolbar">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="19dp" />
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/lb_head"
+            android:id="@+id/ac_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Link a Bank"
+            android:text=" Add a Card"
             android:textAlignment="viewStart"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
         <View
-            android:id="@+id/lb_div"
+            android:id="@+id/ac_div"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="?android:attr/listDivider" />
 
-        <LinearLayout
-            android:id="@+id/lb_fields1"
+        <Spinner
+            android:id="@+id/ac_provider"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Spinner
-                android:id="@+id/lb_provider"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:contentDescription="Bank Provider" />
-
-            <Spinner
-                android:id="@+id/lb_type"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:contentDescription="Account Type" />
-        </LinearLayout>
+            android:layout_height="50dp"
+            android:contentDescription="Bank Provider" />
 
         <LinearLayout
-            android:id="@+id/lb_fields2"
+            android:id="@+id/ac_fields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/lb_routing"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content">
+                android:id="@+id/ac_csv"
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Routing Number" />
+                    android:layout_height="wrap_content"
+                    android:hint="CSV" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/lb_account"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/ac_num"
+                android:layout_width="180dp"
+                android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Account Number" />
+                    android:layout_height="wrap_content"
+                    android:hint="Card Number" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <EditText
+                android:id="@+id/ac_expiry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="date"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/lb_submit"
+            android:id="@+id/ac_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/indigo"
             android:text="Submit" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="73dp" />
+            android:layout_height="71dp" />
 
         <TextView
-            android:id="@+id/ub_head"
+            android:id="@+id/rc_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Linked Banks"
+            android:text=" Linked Cards"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
         <View
-            android:id="@+id/ub_div"
+            android:id="@+id/rc_div"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="?android:attr/listDivider" />
 
         <ScrollView
-            android:id="@+id/ub_scroll"
+            android:id="@+id/rc_scroll"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="150dp">
 
             <LinearLayout
-                android:id="@+id/ub_list"
+                android:id="@+id/rc_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/ub_entry1"
+                    android:id="@+id/rc_entry1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/ub_provider1"
-                        android:layout_width="88dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Bank" />
-
-                    <TextView
-                        android:id="@+id/ub_type1"
+                        android:id="@+id/rc_provider1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Checking" />
+                        android:text="Provider" />
 
                     <TextView
-                        android:id="@+id/ub_number1"
+                        android:id="@+id/rc_type1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Credit" />
+
+                    <TextView
+                        android:id="@+id/rc_number1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="####1000" />
 
                     <Button
-                        android:id="@+id/ub_remove1"
+                        android:id="@+id/rc_remove1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Unlink" />
+                        android:backgroundTint="@color/indigo"
+                        android:text="Remove" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ub_entry2"
+                    android:id="@+id/rc_entry2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/ub_provider2"
-                        android:layout_width="88dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Bank" />
-
-                    <TextView
-                        android:id="@+id/ub_type2"
+                        android:id="@+id/rc_provider2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Checking" />
+                        android:text="Provider" />
 
                     <TextView
-                        android:id="@+id/ub_number2"
+                        android:id="@+id/rc_type2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Credit" />
+
+                    <TextView
+                        android:id="@+id/rc_number2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="####1000" />
 
                     <Button
-                        android:id="@+id/ub_remove2"
+                        android:id="@+id/rc_remove2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Unlink" />
+                        android:backgroundTint="@color/indigo"
+                        android:text="Remove" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ub_entry3"
+                    android:id="@+id/rc_entry3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/ub_provider3"
-                        android:layout_width="88dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Bank" />
-
-                    <TextView
-                        android:id="@+id/ub_type3"
+                        android:id="@+id/rc_provider3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Checking" />
+                        android:text="Provider" />
 
                     <TextView
-                        android:id="@+id/ub_number3"
+                        android:id="@+id/rc_type3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Credit" />
+
+                    <TextView
+                        android:id="@+id/rc_number3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="####1000" />
 
                     <Button
-                        android:id="@+id/ub_remove3"
+                        android:id="@+id/rc_remove3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Unlink" />
+                        android:backgroundTint="@color/indigo"
+                        android:text="Remove" />
                 </LinearLayout>
-
             </LinearLayout>
         </ScrollView>
 
     </LinearLayout>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/btm_toolbar"
-        android:layout_width="413dp"
-        android:layout_height="59dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="(This is the Bottom Option Pane)"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

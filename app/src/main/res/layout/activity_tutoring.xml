@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TutoringActivity">
+
+    <LinearLayout
+        android:id="@+id/tm_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/tm_set1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/sm_button"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
+                android:text="Manage Sessions"
+                android:textSize="12sp"
+                app:icon="@drawable/calendar_vector" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/am_button"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
+                android:text="Announce To Class"
+                android:textSize="12sp"
+                app:icon="@drawable/announce_vector" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/tm_set2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/vm_button"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
+                android:text="View Requests"
+                android:textSize="12sp"
+                app:icon="@drawable/text_vector" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/cb_button"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
+                android:text="Configure Bank"
+                android:textSize="12sp"
+                app:icon="@drawable/money_vector" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

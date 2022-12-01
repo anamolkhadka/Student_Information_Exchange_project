@@ -5,35 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/am_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Manage Account" />
-
     <LinearLayout
         android:id="@+id/am_page"
-        android:layout_width="409dp"
-        android:layout_height="590dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btm_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/am_toolbar">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="50dp" />
 
         <LinearLayout
             android:id="@+id/am_set1"
@@ -51,8 +35,9 @@
                 android:layout_width="100dp"
                 android:layout_height="150dp"
                 android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
                 android:text="Add or Remove Cards"
-                app:icon="@drawable/ic_email_icon" />
+                app:icon="@drawable/card_vector" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -64,8 +49,9 @@
                 android:layout_width="100dp"
                 android:layout_height="150dp"
                 android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
                 android:text="Link or Unlink Banks"
-                app:icon="@drawable/ic_email_icon" />
+                app:icon="@drawable/link_vector" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -93,8 +79,9 @@
                 android:id="@+id/rm_button"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:backgroundTint="@color/indigo"
                 android:text="Request a Refund"
-                app:icon="@drawable/ic_email_icon" />
+                app:icon="@drawable/refund_vector" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -108,34 +95,5 @@
             android:layout_height="match_parent" />
 
     </LinearLayout>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/btm_toolbar"
-        android:layout_width="413dp"
-        android:layout_height="59dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="(This is the Bottom Option Pane)"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
