@@ -23,12 +23,10 @@ class SellActivity : AppCompatActivity() {
     //Getting FireStore reference
     private val db = Firebase.firestore
     private val collectionRef = db.collection("items_for_Sale")
-    private var mImageUri: Uri? = null
+    var mImageUri: Uri? = null
     private lateinit var name: String
     private lateinit var price: String
     private lateinit var description: String
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -149,7 +147,7 @@ class SellActivity : AppCompatActivity() {
 
         ///Creating an object from the user information.
         val item = hashMapOf(
-            "Product Name" to Name,
+            "ProductName" to Name,
             "Price" to Price,
             "Description" to Description,
             "Image_Uri" to mImageUri.toString()
