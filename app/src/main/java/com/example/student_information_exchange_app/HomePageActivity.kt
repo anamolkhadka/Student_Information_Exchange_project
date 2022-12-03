@@ -13,6 +13,7 @@ class HomePageActivity : AppCompatActivity() {
         configureLoginButton()
         configureRegisterButton()
         configureBuyAndSellButton()
+        configureInfoex()
 
     }
     ///Navigating to the login page
@@ -37,6 +38,13 @@ class HomePageActivity : AppCompatActivity() {
         buyAndSellButton.setOnClickListener {
             val loginPage = Intent(this, MainActivity::class.java)
             startActivity(loginPage)
+        }
+    }
+    private fun configureInfoex() {
+        val Infoex_bttn: Button = findViewById(R.id.home_screen_infoExchange_button)
+        Infoex_bttn.setOnClickListener {
+            val InfoexPage = Intent(this, InformationExchangeActivity::class.java)
+            startActivity(InfoexPage)
         }
     }
 
