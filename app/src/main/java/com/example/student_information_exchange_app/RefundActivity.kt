@@ -10,10 +10,13 @@ class RefundActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_refund)
 
+        configureTopBar()
+    }
+    //Sets up top bar with a name and back arrow
+    private fun configureTopBar(){
         val display=supportActionBar
         display?.title="Request a Refund"
         display?.setDisplayHomeAsUpEnabled(true)
-
     }
     //Goes back to previous page when back arrow is pressed
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

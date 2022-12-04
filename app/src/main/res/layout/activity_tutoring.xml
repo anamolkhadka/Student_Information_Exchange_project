@@ -6,107 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".TutoringActivity">
 
-    <LinearLayout
-        android:id="@+id/tm_page"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:orientation="vertical"
+        android:background="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIconTint="@color/white"
+        app:tabIconTintMode="multiply"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
-        <LinearLayout
-            android:id="@+id/tm_set1"
-            android:layout_width="match_parent"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tutor_item"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="@string/tutor_text"/>
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/student_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student_text" />
 
-            <Button
-                android:id="@+id/sm_button"
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/indigo"
-                android:text="Manage Sessions"
-                android:textSize="12sp"
-                app:icon="@drawable/calendar_vector" />
+    </com.google.android.material.tabs.TabLayout>
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/ts_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
-            <Button
-                android:id="@+id/am_button"
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/indigo"
-                android:text="Announce To Class"
-                android:textSize="12sp"
-                app:icon="@drawable/announce_vector" />
+    </androidx.viewpager2.widget.ViewPager2>
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
+    <ImageView
+        android:id="@+id/ts_art"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/tutor_art_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tutoring_art" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
-        <LinearLayout
-            android:id="@+id/tm_set2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/vm_button"
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/indigo"
-                android:text="View Requests"
-                android:textSize="12sp"
-                app:icon="@drawable/text_vector" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/cb_button"
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/indigo"
-                android:text="Configure Bank"
-                android:textSize="12sp"
-                app:icon="@drawable/money_vector" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

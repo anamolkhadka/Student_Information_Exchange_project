@@ -22,10 +22,7 @@ class HomePageDashboardActivity : AppCompatActivity() {
 
         //title= "SIE DASHBOARD"
 
-        //Turns the viewing bar into an ActionBar
-        val supportToolAc=supportActionBar
-        supportToolAc?.title="SIE DASHBOARD"
-
+        configureTopBar()
         configureLogoutButton()
         displayUserEmail()
         configureRegisterButton()
@@ -33,6 +30,11 @@ class HomePageDashboardActivity : AppCompatActivity() {
         configureTutoringButton()
         configurePaymentsButton()
 
+    }
+    //Sets up top bar with a name (enables back bars)
+    private fun configureTopBar(){
+        val display=supportActionBar
+        display?.title="SIE DASHBOARD"
     }
     ///Logging out the user and sending to the login page
     private fun configureLogoutButton(){

@@ -11,18 +11,17 @@ class PaymentActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
 
-        //title=" Manage Account "
-        /*val supportToolAc=supportActionBar
-        supportToolAc?.title="Manage Account"*/
-
-        val display=supportActionBar
-        display?.title="Manage Account"
-        display?.setDisplayHomeAsUpEnabled(true)
-
+        configureTopBar()
         configureCardButton()
         configureBankButton()
         configureRefundButton()
 
+    }
+    //Sets up top bar with a name and back arrow
+    private fun configureTopBar(){
+        val display=supportActionBar
+        display?.title="Manage Account"
+        display?.setDisplayHomeAsUpEnabled(true)
     }
     //Goes back to previous page when back arrow is pressed
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -1,20 +1,20 @@
 package com.example.student_information_exchange_app
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 
-class CardActivity : AppCompatActivity(){
+class TutoringAnnouncementActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_card)
+        setContentView(R.layout.activity_tutoring_announcement)
 
         configureTopBar()
     }
     //Sets up top bar with a name and back arrow
     private fun configureTopBar(){
         val display=supportActionBar
-        display?.title="Add or Remove Cards"
+        display?.title="Make an Announcement"
         display?.setDisplayHomeAsUpEnabled(true)
     }
     //Goes back to previous page when back arrow is pressed

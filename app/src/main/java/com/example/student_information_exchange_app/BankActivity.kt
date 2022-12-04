@@ -9,7 +9,10 @@ class BankActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bank)
 
-        //title=" Link or Unlink Banks "
+        configureTopBar()
+    }
+    //Sets up top bar with a name and back arrow
+    private fun configureTopBar(){
         val display=supportActionBar
         display?.title="Link or Unlink Banks"
         display?.setDisplayHomeAsUpEnabled(true)
