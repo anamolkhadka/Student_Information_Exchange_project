@@ -3,6 +3,7 @@ package com.example.student_information_exchange_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 
 class BuyAndSellActivity : AppCompatActivity() {
@@ -10,8 +11,8 @@ class BuyAndSellActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_and_sell)
 
-        title="Market Place"
 
+        configureTopBar()
         configureSellItemsButton()
         configureBuyItemsButton()
         configureBackToDashboardButton()
@@ -40,7 +41,23 @@ class BuyAndSellActivity : AppCompatActivity() {
             startActivity(marketPage)
         }
     }
+    //Sets up top bar with a name and back arrow
+    private fun configureTopBar(){
+        val display=supportActionBar
+        display?.title="Market Place"
+        display?.setDisplayHomeAsUpEnabled(true)
+    }
 
+    //Goes back to previous page when back arrow is pressed
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 
 
 }
