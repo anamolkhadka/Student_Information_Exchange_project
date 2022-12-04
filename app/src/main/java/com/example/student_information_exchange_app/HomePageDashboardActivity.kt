@@ -20,13 +20,21 @@ class HomePageDashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page_dashboard)
 
-        title= "SIE DASHBOARD"
+        //title= "SIE DASHBOARD"
 
+        configureTopBar()
         configureLogoutButton()
         displayUserEmail()
         configureRegisterButton()
         configureBuyAndSellButton()
+        configureTutoringButton()
+        configurePaymentsButton()
 
+    }
+    //Sets up top bar with a name (enables back bars)
+    private fun configureTopBar(){
+        val display=supportActionBar
+        display?.title="SIE DASHBOARD"
     }
     ///Logging out the user and sending to the login page
     private fun configureLogoutButton(){
@@ -67,7 +75,22 @@ class HomePageDashboardActivity : AppCompatActivity() {
             val buyAndSellPage = Intent(this,BuyAndSellActivity::class.java)
             startActivity(buyAndSellPage)
         }
-
+    }
+    ///Handling tutoring feature from the HomeScreen page.
+    private fun configureTutoringButton() {
+        val tutoringButton: Button = findViewById(R.id.dashboard_tutoring_button)
+        tutoringButton.setOnClickListener {
+            val tutoringPage = Intent(this,TutoringActivity::class.java)
+            startActivity(tutoringPage)
+        }
+    }
+    ////Handling the payments module from the HomeScreen where the user is not logged in.
+    private fun configurePaymentsButton() {
+        val paymentsButton: Button = findViewById(R.id.dashboard_payments_button)
+        paymentsButton.setOnClickListener {
+            val paymentsPage = Intent(this,PaymentActivity::class.java)
+            startActivity(paymentsPage)
+        }
     }
 
 
