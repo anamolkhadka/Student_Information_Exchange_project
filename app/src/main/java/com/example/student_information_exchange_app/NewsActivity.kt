@@ -10,6 +10,7 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
         configureViewDetailsNews();
+        configureViewDetailsNews2();
     }
 
     private fun configureViewDetailsNews() {
@@ -17,6 +18,13 @@ class NewsActivity : AppCompatActivity() {
         viewDetailsbttn.setOnClickListener {
             val viewDetail1 = Intent(this, ViewDetailNewsActivity::class.java)
             startActivity(viewDetail1)
+        }
+    }
+    private fun configureViewDetailsNews2() {
+        val viewDetailsbttn2: Button = findViewById(R.id.ViewDetails_bttn2)
+        viewDetailsbttn2.setOnClickListener {
+            val viewDetail2 = Intent(this, ViewDetailsNews2Activity::class.java)
+            startActivity(viewDetail2)
         }
     }
 }

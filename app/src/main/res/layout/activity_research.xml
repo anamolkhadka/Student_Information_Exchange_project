@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewsActivity">
-
+    tools:context=".ResearchActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/Image_news"
+            android:id="@+id/Image_research1"
             android:layout_width="500dp"
             android:layout_height="200dp"
             android:layout_marginStart="1dp"
@@ -20,16 +19,16 @@
             android:padding="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/news_pic" />
+            app:srcCompat="@drawable/research_pic2" />
 
 
-            />
+        />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Text_News_heading"
-            android:layout_below="@+id/Image_news"
-            android:text="Netherlands knocks off USMNT in World Cup!!"
+            android:id="@+id/Text_research_heading1"
+            android:layout_below="@+id/Image_research1"
+            android:text="PACCP: Price-based, Quality-of-Service (QoS) Aware Transport Protocols!!"
             android:textColor="@color/indigo_dark"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -39,11 +38,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DOHA, Qatar — The U.S. men are heading home, stopped short of the World Cup quarterfinals again...."
-            android:layout_below="@id/Text_News_heading"
-            android:id="@+id/subtitle_news"/>
+            android:text="This project goal is to develop a highly scalable, readily implementable, price-aware, host-based flow control solution..."
+            android:layout_below="@id/Text_research_heading1"
+            android:id="@+id/subtitle_research1"/>
         <Button
-            android:id="@+id/ViewDetails_bttn1"
+            android:id="@+id/ViewDetailsResearch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
@@ -52,7 +51,7 @@
             android:textAllCaps="false"
             android:textColor="@color/indigo_dark"
             android:textSize="10sp"
-            android:layout_below="@id/subtitle_news"
+            android:layout_below="@id/subtitle_research1"
             android:layout_marginStart="280dp"
             />
 
@@ -63,7 +62,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/Image_news2"
+            android:id="@+id/Image_research2"
             android:layout_width="500dp"
             android:layout_height="180dp"
             android:layout_marginStart="1dp"
@@ -72,16 +71,16 @@
             android:padding="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/news_pic2" />
+            app:srcCompat="@drawable/research_pic1" />
 
 
         />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Text_News_heading2"
-            android:layout_below="@+id/Image_news2"
-            android:text="Gas prices are now lower than before Russia's invasion of Ukraine!!"
+            android:id="@+id/Text_research_heading2"
+            android:layout_below="@+id/Image_research2"
+            android:text="Data De-duplication in Distributed Object Storage Systems Used for Cold Storage!!"
             android:textColor="@color/indigo_dark"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -91,11 +90,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Americans are now paying less for gasoline than they did before Russia invaded Ukraine in February as fuel prices continue...."
-            android:layout_below="@id/Text_News_heading2"
-            android:id="@+id/subtitle_news2"/>
+            android:text="This project goal is to study new technologies to enhance the storage efficiency in modern storage systems...."
+            android:layout_below="@id/Text_research_heading2"
+            android:id="@+id/subtitle_research2"/>
         <Button
-            android:id="@+id/ViewDetails_bttn2"
+            android:id="@+id/ViewDetailsResearch2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
@@ -104,7 +103,7 @@
             android:textAllCaps="false"
             android:textColor="@color/indigo_dark"
             android:textSize="10sp"
-            android:layout_below="@id/subtitle_news2"
+            android:layout_below="@id/subtitle_research2"
             android:layout_marginStart="280dp"
             />
 

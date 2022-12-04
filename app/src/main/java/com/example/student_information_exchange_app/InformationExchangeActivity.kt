@@ -11,6 +11,7 @@ class InformationExchangeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_information_exchange)
         configurehomeScreenInfoEx();
         configureNews();
+        configureResearch();
     }
 
     private fun configurehomeScreenInfoEx() {
@@ -26,6 +27,13 @@ class InformationExchangeActivity : AppCompatActivity() {
         News_Bttn.setOnClickListener {
             val newsPage = Intent(this, NewsActivity::class.java)
             startActivity(newsPage)
+        }
+    }
+    private fun configureResearch() {
+        val Research_Bttn: Button = findViewById(R.id.research_button)
+        Research_Bttn.setOnClickListener {
+            val researchPage = Intent(this, ResearchActivity::class.java)
+            startActivity(researchPage)
         }
     }
 }
