@@ -3,7 +3,9 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/adamina</item>
         <item>@font/archivo_black</item>
+        <item>@font/autour_one</item>
         <item>@font/chango</item>
+        <item>@font/chelsea_market</item>
         <item>@font/cutive</item>
         <item>@font/secular_one</item>
     </array>

@@ -15,7 +15,8 @@
             android:layout_height="194dp"
             android:id="@+id/item_image"
             android:importantForAccessibility="no"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"/>
 
         <TextView
             android:id="@+id/item_title"

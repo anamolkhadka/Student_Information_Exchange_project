@@ -24,7 +24,7 @@ class BuyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy)
-        title = "Market "
+        title = "Market Place"
 
         //Finding the reference to the RecyclerView within the layout.
         recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
