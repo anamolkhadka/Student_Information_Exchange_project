@@ -3,6 +3,7 @@ package com.example.student_information_exchange_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -14,6 +15,7 @@ class ViewDetailNewsActivity : AppCompatActivity() {
         configureSummaryNews()
         configureBackHomeNews()
         configureSelectAnotherNews()
+        configureTopBarNews1()
 
     }
 
@@ -45,6 +47,21 @@ class ViewDetailNewsActivity : AppCompatActivity() {
        Select_another_bttn1.setOnClickListener {
             val Prev_info1 = Intent(this, InformationExchangeActivity::class.java)
             startActivity(Prev_info1)
+        }
+    }
+    private fun configureTopBarNews1(){
+        val display=supportActionBar
+        display?.title="Details"
+        display?.setDisplayHomeAsUpEnabled(true)
+    }
+    //Goes back to previous page when back arrow is pressed
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

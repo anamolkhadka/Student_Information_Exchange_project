@@ -3,6 +3,7 @@ package com.example.student_information_exchange_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 
 class NewsActivity : AppCompatActivity() {
@@ -11,6 +12,22 @@ class NewsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_news)
         configureViewDetailsNews();
         configureViewDetailsNews2();
+        configureTopBarNews();
+    }
+    private fun configureTopBarNews(){
+        val display=supportActionBar
+        display?.title="News"
+        display?.setDisplayHomeAsUpEnabled(true)
+    }
+    //Goes back to previous page when back arrow is pressed
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun configureViewDetailsNews() {

@@ -42,6 +42,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ViewDetailsCL1Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
 
             android:name=".TutoringRequestActivity"
 
@@ -78,21 +85,14 @@
                 android:value="" />
         </activity>
         <activity
-
-
-
             android:name=".RatingActivity"
-
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-
-
             android:name=".EnrollmentActivity"
-
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

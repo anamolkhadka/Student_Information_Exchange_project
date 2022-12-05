@@ -3,6 +3,7 @@ package com.example.student_information_exchange_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 
 class ResearchActivity : AppCompatActivity() {
@@ -11,6 +12,7 @@ class ResearchActivity : AppCompatActivity() {
         setContentView(R.layout.activity_research)
         configureViewDetailsResearch1()
         configureViewDetailsResearch2()
+        configureTopBarResearch()
 
     }
 
@@ -27,6 +29,21 @@ class ResearchActivity : AppCompatActivity() {
         viewDetailsresearch_bttn2.setOnClickListener {
             val viewDetailresearch2 = Intent(this, ViewDetailsResearch2Activity::class.java)
             startActivity(viewDetailresearch2)
+        }
+    }
+    private fun configureTopBarResearch(){
+        val display=supportActionBar
+        display?.title="Research"
+        display?.setDisplayHomeAsUpEnabled(true)
+    }
+    //Goes back to previous page when back arrow is pressed
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }
