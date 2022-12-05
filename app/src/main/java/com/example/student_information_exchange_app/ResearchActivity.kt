@@ -36,7 +36,6 @@ class ResearchActivity : AppCompatActivity() {
         display?.title="Research"
         display?.setDisplayHomeAsUpEnabled(true)
     }
-    //Goes back to previous page when back arrow is pressed
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId) {
             android.R.id.home -> {
