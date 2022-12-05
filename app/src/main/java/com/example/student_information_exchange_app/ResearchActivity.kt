@@ -25,7 +25,7 @@ class ResearchActivity : AppCompatActivity() {
     private fun configureViewDetailsResearch2() {
         val viewDetailsresearch_bttn2: Button = findViewById(R.id.ViewDetailsResearch2)
         viewDetailsresearch_bttn2.setOnClickListener {
-            val viewDetailresearch2 = Intent(this, ViewDetailsNews2Activity::class.java)
+            val viewDetailresearch2 = Intent(this, ViewDetailsResearch2Activity::class.java)
             startActivity(viewDetailresearch2)
         }
     }

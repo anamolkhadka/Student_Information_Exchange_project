@@ -12,6 +12,7 @@ class InformationExchangeActivity : AppCompatActivity() {
         configurehomeScreenInfoEx();
         configureNews();
         configureResearch();
+        configureCampusLife()
     }
 
     private fun configurehomeScreenInfoEx() {
@@ -36,5 +37,13 @@ class InformationExchangeActivity : AppCompatActivity() {
             startActivity(researchPage)
         }
     }
+    private fun configureCampusLife() {
+        val campuslife_Bttn: Button = findViewById(R.id.Campus_life_button)
+        campuslife_Bttn.setOnClickListener {
+            val CLPage = Intent(this, CampusLifeActivity::class.java)
+            startActivity(CLPage)
+        }
+    }
+
 }
 
