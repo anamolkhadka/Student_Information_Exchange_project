@@ -39,7 +39,7 @@ class BuyItemAdapter(private val context: Context, private val dataset: List<Ite
         val item: ItemData = dataset[position]
         holder.itemName.text  = item.ProductName
         holder.itemPrice.text = item.Price
-        ///holder.itemImage.setImageURI(item.Image_Uri.toUri())
+        holder.itemImage.setImageURI(item.Image_Uri.toUri())
         ////Picasso.get().load(item.Image_Uri).into(holder.itemImage)
 
         ////val url: URL = URL(item.Image_Uri)
