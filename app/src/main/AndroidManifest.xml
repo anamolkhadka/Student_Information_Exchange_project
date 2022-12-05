@@ -12,27 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Student_Information_Exchange_app"
         tools:targetApi="31">
-        <activity
-            android:name=".ViewDetailsCL2Acitvity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ViewDetailsCL1Activity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".CampusLifeActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".ViewDetailsResearch2Activity"
             android:exported="false">
@@ -48,20 +28,99 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ViewDetailsResearch1"
+            android:name=".InformationExchangeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ResearchActivity"
+            android:name=".ViewDetailsCL2Acitvity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
+
+            android:name=".TutoringRequestActivity"
+
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+
+            android:name=".CampusLifeActivity"
+
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+
+            android:name=".TutoringAnnouncementActivity"
+
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+
+            android:name=".TutoringSessionActivity"
+
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+
+
+
+            android:name=".RatingActivity"
+
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+
+
+            android:name=".EnrollmentActivity"
+
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+
+
+
+            android:name=".TutoringActivity"
+
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+
+
+            android:name=".BuyActivity"
+
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+
             android:name=".ViewDetailsNews2Activity"
             android:exported="false">
             <meta-data
@@ -69,7 +128,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ViewDetailsNews2"
+            android:name=".ResearchActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -90,7 +149,10 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".InformationExchangeActivity"
+
+
+            android:name=".SellActivity"
+
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -132,6 +194,34 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".BankActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CardActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RefundActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
