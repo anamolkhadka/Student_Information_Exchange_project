@@ -6,4 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".TutoringRequestActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/rq_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Accept or Reject Requests"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/rq_div"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="add" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

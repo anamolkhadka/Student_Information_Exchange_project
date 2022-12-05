@@ -78,9 +78,21 @@
     <string name="us_text">US Bank</string>
     <string name="checking_text">Checking</string>
     <string name="savings_text">Savings</string>
-    <string name="expiry_text">Expiry Date</string>
+    <string name="expiry_text">mm/yy</string>
     <string name="card">Card</string>
     <string name="bank">Bank</string>
+    <string name="credit_text">Credit</string>
+    <string name="debit_text">Debit</string>
+    <string name="ct_desc">Card Type</string>
+    <string name="visa_text">Visa</string>
+    <string name="mc_text">MasterCard</string>
+    <string name="amex_text">American Express</string>
+    <string name="disc_text">Discover</string>
+    <string name="jcb_text">JCB</string>
+    <string name="add_text">Add</string>
+    <string name="edit_text">Edit</string>
+    <string name="join_text">Join</string>
+    <string name="an_desc">Select a scheduled session</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

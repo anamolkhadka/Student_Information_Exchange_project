@@ -36,7 +36,7 @@ class TutoringActivity : AppCompatActivity() {
     }
     //Sets up the viewpager and its elements
     private fun configureViewPager(){
-        val tabLayout:TabLayout=findViewById(R.id.tabLayout)
+        val tabLayout:TabLayout=findViewById(R.id.tutor_tabs)
         val viewPager:ViewPager2 =findViewById(R.id.ts_pager)
         val person=ContextCompat.getDrawable(this, R.drawable.person_icon)
         val cap=ContextCompat.getDrawable(this, R.drawable.grad_icon)

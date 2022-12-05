@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/rm_page"
         android:layout_width="409dp"
-        android:layout_height="620dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"

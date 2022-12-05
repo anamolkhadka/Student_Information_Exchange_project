@@ -6,4 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".TutoringAnnouncementActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/an_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Select Session"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/an_div"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="add" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/an_desc"
+            android:minHeight="48dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:id="@+id/at_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Annonucement"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/at_div"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="add" />
+
+        <EditText
+            android:id="@+id/at_text"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/message_text"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/at_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/indigo"
+            android:text="Submit" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

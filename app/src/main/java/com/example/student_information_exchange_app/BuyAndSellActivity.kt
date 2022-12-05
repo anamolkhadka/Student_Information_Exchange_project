@@ -11,7 +11,6 @@ class BuyAndSellActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_and_sell)
 
-
         configureTopBar()
         configureSellItemsButton()
         configureBuyItemsButton()
