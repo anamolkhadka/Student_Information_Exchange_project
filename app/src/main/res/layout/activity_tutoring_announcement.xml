@@ -16,41 +16,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/an_head"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" Select Session"
-            android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <View
-            android:id="@+id/an_div"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="?android:attr/listDivider"
-            android:backgroundTint="@color/black"
-            android:backgroundTintMode="add" />
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/an_desc"
-            android:minHeight="48dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="150dp" />
-
-        <TextView
             android:id="@+id/at_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Annonucement"
+            android:text="@string/announcement_text"
             android:textAlignment="viewStart"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:translationX="10dp" />
 
         <View
             android:id="@+id/at_div"

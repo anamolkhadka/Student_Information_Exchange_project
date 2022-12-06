@@ -24,7 +24,8 @@
             android:textAlignment="viewStart"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:translationX="10dp" />
 
         <View
             android:id="@+id/ac_div"
@@ -113,7 +114,8 @@
             android:layout_height="wrap_content"
             android:text="@string/lc_title"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:translationX="10dp" />
 
         <View
             android:id="@+id/rc_div"
@@ -134,43 +136,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <RadioGroup
+                    android:id="@+id/rc_group"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/rc_provider1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Provider" />
-
-                    <TextView
-                        android:id="@+id/rc_type1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Credit" />
-
-                    <TextView
-                        android:id="@+id/rc_number1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="####1000" />
-
-                    <Button
-                        android:id="@+id/rc_remove1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/indigo"
-                        android:text="@string/remove_text" />
-                </LinearLayout>
-
+                    android:layout_height="wrap_content" />
             </LinearLayout>
         </ScrollView>
+
+        <Button
+            android:id="@+id/rc_remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/indigo"
+            android:text="@string/remove_text" />
 
     </LinearLayout>
 

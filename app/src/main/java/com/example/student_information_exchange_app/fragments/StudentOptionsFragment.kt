@@ -20,7 +20,7 @@ class StudentOptionsFragment : Fragment() {
     ): View? {
         val view:View=inflater.inflate(R.layout.fragment_student_options, container, false)
 
-        if(false) {
+        if(true) {
             disableEnrollButton(view)
             disableRatingButton(view)
         }else{

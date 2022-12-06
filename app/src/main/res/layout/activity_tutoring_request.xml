@@ -19,10 +19,11 @@
             android:id="@+id/rq_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Accept or Reject Requests"
+            android:text="@string/accept_or_reject"
             android:textAlignment="viewStart"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:translationX="10dp" />
 
         <View
             android:id="@+id/rq_div"
