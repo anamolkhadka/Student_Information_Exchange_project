@@ -7,19 +7,6 @@
     android:orientation="vertical"
     android:background="#ffffff"
     tools:context=".InformationExchangeActivity">
-    <Button
-        android:id="@+id/home_screen_infoExchange_button_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/back_to_home_screen_text"
-        android:textAllCaps="false"
-        android:textColor="@color/indigo_dark"
-        android:textSize="10sp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/news_button"
@@ -33,7 +20,7 @@
         android:fontFamily="sans-serif-medium"
         android:textAllCaps="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -49,7 +36,7 @@
         android:fontFamily="sans-serif-medium"
         android:textAllCaps="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="135dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -65,7 +52,7 @@
         android:fontFamily="sans-serif-medium"
         android:textAllCaps="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="210dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />

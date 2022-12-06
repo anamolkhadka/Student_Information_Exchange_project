@@ -3,23 +3,32 @@ package com.example.student_information_exchange_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 
 class InformationExchangeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_information_exchange)
-        configurehomeScreenInfoEx();
+        configureTopBarInfoex()
         configureNews();
         configureResearch();
         configureCampusLife()
     }
 
-    private fun configurehomeScreenInfoEx() {
-        val BackHomeInfoex: Button = findViewById(R.id.home_screen_infoExchange_button_btn)
-        BackHomeInfoex.setOnClickListener {
-            val backpage = Intent(this, HomePageActivity::class.java)
-            startActivity(backpage)
+    private fun configureTopBarInfoex(){
+        val display=supportActionBar
+        display?.title="Information Exchange"
+        display?.setDisplayHomeAsUpEnabled(true)
+    }
+    //Goes back to previous page when back arrow is pressed
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 

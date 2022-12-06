@@ -29,6 +29,7 @@ class HomePageDashboardActivity : AppCompatActivity() {
         configureBuyAndSellButton()
         configureTutoringButton()
         configurePaymentsButton()
+        configureInfoex()
 
     }
     //Sets up top bar with a name (enables back bars)
@@ -93,6 +94,12 @@ class HomePageDashboardActivity : AppCompatActivity() {
         }
     }
 
-
+    private fun configureInfoex() {
+        val InfoExButton: Button = findViewById(R.id.dashboard_infoExchange_button)
+        InfoExButton.setOnClickListener {
+            val InfoExPage = Intent(this,InformationExchangeActivity::class.java)
+            startActivity(InfoExPage)
+        }
+    }
 
 }
