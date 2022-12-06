@@ -42,6 +42,12 @@
     <string name="buy_used_nor_n_new_items_text">Buy used\nOr\n New items</string>
     <string name="sell_used_nor_n_new_items_text">Sell USEd\nor\n New items</string>
     <string name="back_to_dashboard_text">Back to Dashboard</string>
+    <string name="back_text">Back</string>
+    <string name="buy_item_text">Buy item</string>
+    <string name="price_breakdown_text">Price Breakdown</string>
+    <string name="product_price_text">Product Price :</string>
+    <string name="sales_tax_text">Sales tax :</string>
+    <string name="total_amount_due_text">Total Amount Due :</string>
     <string name="default_text">Default</string>
     <string name="tutor_text">Tutor</string>
     <string name="student_text">Student</string>
@@ -93,4 +99,5 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    
 </resources>

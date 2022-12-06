@@ -8,21 +8,6 @@
     android:background="@color/indigo_light"
     tools:context=".BuyAndSellActivity">
 
-    <!-- Back to Dashboard button -->
-    <Button
-        android:id="@+id/back_dashboard_link_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/back_to_dashboard_text"
-        android:textAllCaps="false"
-        android:textColor="@color/indigo_dark"
-        android:textSize="12sp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <Button
         android:id="@+id/activity_buy_button"
         android:layout_width="wrap_content"

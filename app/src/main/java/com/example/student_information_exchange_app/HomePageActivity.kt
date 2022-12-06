@@ -16,6 +16,7 @@ class HomePageActivity : AppCompatActivity() {
         configureInfoex()
         configureFormClubButton()
         configureTutoringButton()
+        configureAdvertisementButton()
         configurePaymentsButton()
 
     }
@@ -79,6 +80,23 @@ class HomePageActivity : AppCompatActivity() {
                 val loginPage = Intent(this, MainActivity::class.java)
                 startActivity(loginPage)
             }
+            
+    }
+    ////Handling the Advertisement request from the HomeScreen where the user is not logged in.
+    private fun configureAdvertisementButton(){
+        val advertisementButton: Button = findViewById(R.id.home_screen_advertisement_button)
+        advertisementButton.setOnClickListener{
+            val loginPage = Intent(this, MainActivity::class.java)
+            startActivity(loginPage)
+        }
+
+    }
+    ////Handling the payments module from the HomeScreen where the user is not logged in.
+    private fun configurePaymentsButton() {
+        val paymentsButton: Button = findViewById(R.id.home_screen_payments_button)
+        paymentsButton.setOnClickListener {
+            val loginPage = Intent(this, MainActivity::class.java)
+            startActivity(loginPage)
         }
 
         ////Handling the payments module from the HomeScreen where the user is not logged in.
