@@ -3,6 +3,7 @@ package com.example.student_information_exchange_app
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.DocumentChange
@@ -24,17 +25,17 @@ class BuyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy)
-        title = "Market Place"
 
         //Finding the reference to the RecyclerView within the layout.
         recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.setHasFixedSize(true)
-
+        title="Market Place"
 
         itemArrayList = arrayListOf()
         myAdapter = BuyItemAdapter(this, itemArrayList)
         recyclerView.adapter = myAdapter
         eventChangeListener()
+        ///configureTopBar()
 
 
     }

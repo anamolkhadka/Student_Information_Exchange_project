@@ -23,21 +23,24 @@
         </activity>
         <activity
             android:name=".BuyActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".BuyAndSellActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".SellActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".BuyAndSellActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".BuyAndSellActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".HomePageDashboardActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

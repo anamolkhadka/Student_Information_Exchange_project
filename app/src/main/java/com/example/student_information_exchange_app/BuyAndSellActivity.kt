@@ -3,6 +3,7 @@ package com.example.student_information_exchange_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 
 class BuyAndSellActivity : AppCompatActivity() {
@@ -14,15 +15,7 @@ class BuyAndSellActivity : AppCompatActivity() {
 
         configureSellItemsButton()
         configureBuyItemsButton()
-        configureBackToDashboardButton()
-    }
 
-    private fun configureBackToDashboardButton() {
-        val backButton: Button = findViewById(R.id.back_dashboard_link_btn)
-        backButton.setOnClickListener {
-            val dashboardPage = Intent(this,HomePageDashboardActivity::class.java)
-            startActivity(dashboardPage)
-        }
     }
 
     private fun configureSellItemsButton() {
@@ -40,7 +33,5 @@ class BuyAndSellActivity : AppCompatActivity() {
             startActivity(marketPage)
         }
     }
-
-
 
 }
