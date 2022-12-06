@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -99,6 +100,15 @@ class PurchaseDetailsActivity : AppCompatActivity() {
         taxId.text   = getString(R.string.sales_tax_text).plus(formattedTax)
         totalId.text = getString(R.string.total_amount_due_text).plus(totalPrice)
 
+        ///Setting the Pickup and delivery button visible.
+        val pickupButton: Button = findViewById(R.id.choose_pickup_delivery_button)
+        pickupButton.visibility = View.VISIBLE
+
+        //Adding intent to the choose pickup delivery button
+        pickupButton.setOnClickListener{
+            val pickupDeliveryPage = Intent(this,DeliveryActivity::class.java)
+            startActivity(pickupDeliveryPage)
+        }
 
     }
 

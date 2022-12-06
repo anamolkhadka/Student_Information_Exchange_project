@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PickupActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/nedderman_hall" />
+
+    <Button
+        android:id="@+id/proceed_to_payment_button_2"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/proceed_to_payment_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/pickup_address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="400dp"
+        android:fontFamily="serif"
+        android:text="@string/pickup_location_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proceed_to_payment_button_2" />
+
+    <TextView
+        android:id="@+id/street_address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:text="@string/_416_yates_street_text"
+        app:layout_constraintStart_toStartOf="@+id/pickup_address_text"
+        app:layout_constraintTop_toBottomOf="@+id/pickup_address_text" />
+
+    <TextView
+        android:id="@+id/city_state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:text="@string/arlington_tx_text"
+        app:layout_constraintStart_toStartOf="@+id/street_address_text"
+        app:layout_constraintTop_toBottomOf="@+id/street_address_text" />
+
+    <TextView
+        android:id="@+id/zipcode_output_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:text="@string/_76010_text"
+        app:layout_constraintStart_toStartOf="@+id/city_state_text"
+        app:layout_constraintTop_toBottomOf="@+id/city_state_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
