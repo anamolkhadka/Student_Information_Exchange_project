@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmailActivity">
+
+
+    <TextView
+        android:id="@+id/to_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_text"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:hint="@string/email_address_text"
+        app:layout_constraintStart_toStartOf="@+id/to_text"
+        app:layout_constraintTop_toBottomOf="@+id/to_text"/>
+
+    <TextView
+        android:id="@+id/subject_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject_text"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/to_text"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/subject_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:lines="2"
+        android:hint="@string/enter_email_heading_text"
+        app:layout_constraintStart_toStartOf="@+id/to_text"
+        app:layout_constraintTop_toBottomOf="@+id/subject_text"/>
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_string"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/to_text"
+        app:layout_constraintTop_toBottomOf="@+id/subject_text_input"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/message_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:hint="@string/type_your_message_here_text"
+        app:layout_constraintStart_toStartOf="@+id/to_text"
+        android:lines="10"
+        app:layout_constraintTop_toBottomOf="@+id/message_text"/>
+
+    <Button
+        android:id="@+id/send_email_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_email_text"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message_text_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

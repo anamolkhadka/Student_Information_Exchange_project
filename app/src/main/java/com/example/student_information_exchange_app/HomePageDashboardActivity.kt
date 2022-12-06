@@ -3,6 +3,7 @@ package com.example.student_information_exchange_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Email
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
@@ -31,6 +32,7 @@ class HomePageDashboardActivity : AppCompatActivity() {
         configurePaymentsButton()
         configureInfoex()
         configureFormclub()
+        configureMessage()
 
     }
     //Sets up top bar with a name (enables back bars)
@@ -110,4 +112,11 @@ class HomePageDashboardActivity : AppCompatActivity() {
         }
     }
 
+    private fun configureMessage(){
+        val button:Button = findViewById(R.id.dashboard_chat_button)
+        button.setOnClickListener{
+            val messagePage = Intent(this,EmailActivity::class.java)
+            startActivity(messagePage)
+        }
+    }
 }
