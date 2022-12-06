@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TutoringActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tutor_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIconTint="@color/white"
+        app:tabIconTintMode="multiply"
+        app:tabIndicatorColor="@color/indigo_light"
+        app:tabIndicatorHeight="5dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tutor_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tutor_text" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/student_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student_text" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/ts_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tutor_tabs">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <ImageView
+        android:id="@+id/ts_art"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/tutor_art_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tutoring_art" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

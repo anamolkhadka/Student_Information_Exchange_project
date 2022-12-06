@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bank_providers">
+        <item>@string/bofa_text</item>
+        <item>@string/chase_text</item>
+        <item>@string/wf_text</item>
+        <item>@string/citi_text</item>
+        <item>@string/cap_text</item>
+        <item>@string/pnc_text</item>
+        <item>@string/us_text</item>
+    </array>
+    <array name="card_providers">
+        <item>@string/visa_text</item>
+        <item>@string/mc_text</item>
+        <item>@string/amex_text</item>
+        <item>@string/disc_text</item>
+        <item>@string/jcb_text</item>
+    </array>
+    <array name="account_type">
+        <item>@string/checking_text</item>
+        <item>@string/savings_text</item>
+    </array>
+    <array name="card_type">
+        <item>@string/credit_text</item>
+        <item>@string/debit_text</item>
+    </array>
+</resources>

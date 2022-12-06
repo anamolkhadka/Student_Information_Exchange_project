@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TutorOptionsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/tm_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tutor_tabs">
+
+        <LinearLayout
+            android:id="@+id/tm_set1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/sm_button"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
+                android:text="@string/sm_button_text"
+                android:textSize="12sp"
+                app:icon="@drawable/calendar_icon" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/am_button"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
+                android:text="@string/am_button_text"
+                android:textSize="12sp"
+                app:icon="@drawable/announce_icon" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/tm_set2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/vm_button"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
+                android:text="@string/vm_button_text"
+                android:textSize="12sp"
+                app:icon="@drawable/text_icon" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/cb_button"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/indigo"
+                android:text="@string/cb_button_text"
+                android:textSize="12sp"
+                android:translationY="-7dp"
+                app:icon="@drawable/money_icon" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
