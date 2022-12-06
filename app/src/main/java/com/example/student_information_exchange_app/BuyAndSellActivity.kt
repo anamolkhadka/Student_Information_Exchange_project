@@ -15,15 +15,7 @@ class BuyAndSellActivity : AppCompatActivity() {
         configureTopBar()
         configureSellItemsButton()
         configureBuyItemsButton()
-        configureBackToDashboardButton()
-    }
 
-    private fun configureBackToDashboardButton() {
-        val backButton: Button = findViewById(R.id.back_dashboard_link_btn)
-        backButton.setOnClickListener {
-            val dashboardPage = Intent(this,HomePageDashboardActivity::class.java)
-            startActivity(dashboardPage)
-        }
     }
 
     private fun configureSellItemsButton() {

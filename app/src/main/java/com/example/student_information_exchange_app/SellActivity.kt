@@ -23,12 +23,10 @@ class SellActivity : AppCompatActivity() {
     //Getting FireStore reference
     private val db = Firebase.firestore
     private val collectionRef = db.collection("items_for_Sale")
-    private var mImageUri: Uri? = null
+    var mImageUri: Uri? = null
     private lateinit var name: String
     private lateinit var price: String
     private lateinit var description: String
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +41,8 @@ class SellActivity : AppCompatActivity() {
     private fun configureChoosePhotoButton() {
         val chooseImageButton = findViewById<Button>(R.id.upload_photo_button)
         chooseImageButton.setOnClickListener {
-            val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+            val gallery = Intent(Intent.ACTION_OPEN_DOCUMENT, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+            gallery.type = "image/*"
             resultLauncher.launch(gallery)
 
         }
@@ -101,13 +100,11 @@ class SellActivity : AppCompatActivity() {
         }
     }
 
-    ///Uploading the product in the database and the photo on the data storage.
+    ///Function to upload the  product image in the Cloud Storage.
     private fun uploadImage(){
 
         ///check whether the ImageUri is Null.
         if(mImageUri != null){
-
-            uploadItem(name,price,description)
 
             //Formatting name for the file to be uploaded.
             val formatter = SimpleDateFormat("yyyy_mm_dd_hh_mm_ss", Locale.getDefault())
@@ -125,9 +122,21 @@ class SellActivity : AppCompatActivity() {
 
             }.addOnSuccessListener {
                 ///Handle Success
-                mImageUri = null
+                ///mImageUri = null
+                ///Get a download Url.
+                storageReference.downloadUrl
+                    .addOnCompleteListener() { task ->
+                        if (task.isSuccessful) {
+                            val downloadUri = task.result
+                            uploadItem(name,price,description,downloadUri)
+                        } else {
+                            // Handle failures
+                            Toast.makeText(this,"Url download failed",Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
                 Toast.makeText(applicationContext,"Transaction Succeed ! ",Toast.LENGTH_SHORT).show()
-                ///Take the user back to dashboard.
+                ///Take the user back to buy and sell main page.
                 val nextPage = Intent(this, BuyAndSellActivity::class.java)
                 startActivity(nextPage)
 
@@ -139,20 +148,21 @@ class SellActivity : AppCompatActivity() {
 
             }
 
+
         }else {
             Toast.makeText(this, "Please select the picture", Toast.LENGTH_SHORT).show()
         }
 
     }
     ///Function to upload the product information in firebase fireStore database.
-    private fun uploadItem(Name:String,Price:String,Description:String){
+    private fun uploadItem(Name:String,Price:String,Description:String,myImageUri: Uri){
 
         ///Creating an object from the user information.
         val item = hashMapOf(
-            "Product Name" to Name,
+            "ProductName" to Name,
             "Price" to Price,
             "Description" to Description,
-            "Image_Uri" to mImageUri.toString()
+            "Image_Uri" to myImageUri.toString()
         )
         ////Creating a document reference.
         ///Setting a unique name for each document using timestamp

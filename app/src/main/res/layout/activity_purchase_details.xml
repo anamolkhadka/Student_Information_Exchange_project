@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PurchaseDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".PurchaseDetailsActivity">
+
+        <TextView
+            android:id="@+id/product_name_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/indigo_dark"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/item_image_output"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:importantForAccessibility="no"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_name_output"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/product_price_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="serif"
+            android:textColor="#E91E63"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_image_output" />
+
+        <TextView
+            android:id="@+id/product_description_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="@+id/product_price_output"
+            app:layout_constraintTop_toBottomOf="@+id/product_price_output" />
+
+        <Button
+            android:id="@+id/back_to_other_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_text"
+            android:textAllCaps="false"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="@+id/product_description_output"
+            app:layout_constraintTop_toBottomOf="@+id/product_description_output"/>
+
+        <Button
+            android:id="@+id/buy_the_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buy_item_text"
+            android:textAllCaps="false"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_description_output"/>
+
+        <TextView
+            android:id="@+id/price_breakdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/product_description_output"
+            app:layout_constraintTop_toBottomOf="@+id/back_to_other_item" />
+
+        <TextView
+            android:id="@+id/cost_of_product_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/product_description_output"
+            app:layout_constraintTop_toBottomOf="@+id/price_breakdown" />
+
+        <TextView
+            android:id="@+id/sales_tax_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/cost_of_product_text"
+            app:layout_constraintTop_toBottomOf="@+id/cost_of_product_text" />
+
+        <TextView
+            android:id="@+id/total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/cost_of_product_text"
+            app:layout_constraintTop_toBottomOf="@+id/sales_tax_id" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
