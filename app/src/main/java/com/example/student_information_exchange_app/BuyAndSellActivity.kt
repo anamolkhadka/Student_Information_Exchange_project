@@ -11,8 +11,8 @@ class BuyAndSellActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_and_sell)
 
-        title="Market Place"
 
+        configureTopBar()
         configureSellItemsButton()
         configureBuyItemsButton()
 
@@ -33,5 +33,23 @@ class BuyAndSellActivity : AppCompatActivity() {
             startActivity(marketPage)
         }
     }
+    //Sets up top bar with a name and back arrow
+    private fun configureTopBar(){
+        val display=supportActionBar
+        display?.title="Market Place"
+        display?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    //Goes back to previous page when back arrow is pressed
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
 }

@@ -48,4 +48,56 @@
     <string name="product_price_text">Product Price :</string>
     <string name="sales_tax_text">Sales tax :</string>
     <string name="total_amount_due_text">Total Amount Due :</string>
+    <string name="default_text">Default</string>
+    <string name="tutor_text">Tutor</string>
+    <string name="student_text">Student</string>
+    <string name="tutor_art_desc">Image of message bubbles, a cursor, and textbooks</string>
+    <string name="payment_art_desc">Image of coins, and world currency signs</string>
+    <string name="sm_button_text">Manage Sessions</string>
+    <string name="am_button_text">Announce to Class</string>
+    <string name="vm_button_text">View Requests</string>
+    <string name="cb_button_text">Configure Banking Method</string>
+    <string name="em_button_text">Manage Enroll</string>
+    <string name="rt_button_text">Rate Prior Tutors</string>
+    <string name="cm_button_text">Add or Remove Cards</string>
+    <string name="bm_button_text">Link or Unlink Banks</string>
+    <string name="rm_button_text">Request a Refund</string>
+    <string name="submit_text">Submit</string>
+    <string name="unlink_text">Unlink</string>
+    <string name="remove_text">Remove</string>
+    <string name="routing_text">Routing Number</string>
+    <string name="account_text">Account Number</string>
+    <string name="csv_text">CSV</string>
+    <string name="card_text">Card Number</string>
+    <string name="lab_title"> Link a Bank</string>
+    <string name="lb_title"> Linked Banks</string>
+    <string name="aac_title"> Add a Card</string>
+    <string name="lc_title"> Linked Cards</string>
+    <string name="bp_desc">Bank Provider</string>
+    <string name="at_desc">Account Type</string>
+    <string name="bofa_text">Bank of America</string>
+    <string name="chase_text">Chase</string>
+    <string name="wf_text">Wells Fargo</string>
+    <string name="citi_text">Citi Bank</string>
+    <string name="cap_text">Capital One</string>
+    <string name="pnc_text">PNC Bank</string>
+    <string name="us_text">US Bank</string>
+    <string name="checking_text">Checking</string>
+    <string name="savings_text">Savings</string>
+    <string name="expiry_text">Expiry Date</string>
+    <string name="card">Card</string>
+    <string name="bank">Bank</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_rating">RatingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    
 </resources>
