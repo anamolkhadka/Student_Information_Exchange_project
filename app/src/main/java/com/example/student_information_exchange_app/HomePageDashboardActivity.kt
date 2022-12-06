@@ -30,6 +30,7 @@ class HomePageDashboardActivity : AppCompatActivity() {
         configureTutoringButton()
         configurePaymentsButton()
         configureInfoex()
+        configureFormclub()
 
     }
     //Sets up top bar with a name (enables back bars)
@@ -99,6 +100,13 @@ class HomePageDashboardActivity : AppCompatActivity() {
         InfoExButton.setOnClickListener {
             val InfoExPage = Intent(this,InformationExchangeActivity::class.java)
             startActivity(InfoExPage)
+        }
+    }
+    private fun configureFormclub() {
+        val FormClubBttn: Button = findViewById(R.id.dashboard_formClub_button)
+        FormClubBttn.setOnClickListener {
+            val FormclubPage = Intent(this,FormclubActivity::class.java)
+            startActivity(FormclubPage)
         }
     }
 
