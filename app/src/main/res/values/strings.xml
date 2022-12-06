@@ -119,5 +119,9 @@
     <string name="message_string">Message:</string>
     <string name="type_your_message_here_text">Type your message here.....</string>
     <string name="send_email_text">SEND EMAIL</string>
+    <string name="business_name_text">Business Name</string>
+    <string name="contact_number_text">Contact Number</string>
+    <string name="submit_text2">Submit</string>
+    <string name="advertisement_request_form_text">Advertisement request form</string>
 
 </resources>

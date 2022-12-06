@@ -33,6 +33,7 @@ class HomePageDashboardActivity : AppCompatActivity() {
         configureInfoex()
         configureFormclub()
         configureMessage()
+        configureAdvertisement()
 
     }
     //Sets up top bar with a name (enables back bars)
@@ -117,6 +118,14 @@ class HomePageDashboardActivity : AppCompatActivity() {
         button.setOnClickListener{
             val messagePage = Intent(this,EmailActivity::class.java)
             startActivity(messagePage)
+        }
+    }
+
+    private fun configureAdvertisement(){
+        val button:Button = findViewById(R.id.dashboard_advertisement_button)
+        button.setOnClickListener{
+            val adPage = Intent(this,AdvertisementActivity::class.java)
+            startActivity(adPage)
         }
     }
 }
