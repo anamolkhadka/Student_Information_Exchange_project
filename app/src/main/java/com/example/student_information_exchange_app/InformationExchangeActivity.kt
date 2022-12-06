@@ -21,16 +21,6 @@ class InformationExchangeActivity : AppCompatActivity() {
         display?.title="Information Exchange"
         display?.setDisplayHomeAsUpEnabled(true)
     }
-    //Goes back to previous page when back arrow is pressed
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
-            android.R.id.home -> {
-                finish()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
 
     private fun configureNews() {
         val News_Bttn: Button = findViewById(R.id.news_button)

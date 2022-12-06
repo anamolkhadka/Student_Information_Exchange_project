@@ -112,5 +112,12 @@
     <string name="_416_yates_street_text">416 Yates Street,</string>
     <string name="arlington_tx_text">Arlington, TX</string>
     <string name="_76010_text">76010</string>
+    <string name="to_text">To:</string>
+    <string name="email_address_text">Email Address</string>
+    <string name="subject_text">Subject:</string>
+    <string name="enter_email_heading_text">Enter email heading</string>
+    <string name="message_string">Message:</string>
+    <string name="type_your_message_here_text">Type your message here.....</string>
+    <string name="send_email_text">SEND EMAIL</string>
 
 </resources>

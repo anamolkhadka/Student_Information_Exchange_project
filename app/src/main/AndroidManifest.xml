@@ -15,6 +15,14 @@
         android:theme="@style/Theme.Student_Information_Exchange_app"
         tools:targetApi="31">
         <activity
+            android:name=".EmailActivity"
+            android:exported="false"
+            android:parentActivityName=".HomePageDashboardActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".PickupActivity"
             android:exported="false"
             android:parentActivityName=".BuyActivity">
@@ -96,28 +104,32 @@
         </activity>
         <activity
             android:name=".ViewDetailsResearch1Activity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".InformationExchangeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".InformationExchangeActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".HomePageActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ViewDetailsCL2Acitvity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".InformationExchangeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ViewDetailsCL1Activity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".InformationExchangeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
