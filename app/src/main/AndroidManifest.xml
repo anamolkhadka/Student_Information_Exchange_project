@@ -33,7 +33,7 @@
         <activity
             android:name=".PickupActivity"
             android:exported="false"
-            android:parentActivityName=".BuyActivity">
+            android:parentActivityName=".DeliveryActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -41,8 +41,7 @@
         <activity
             android:name=".DeliveryActivity2"
             android:exported="false"
-            android:parentActivityName=".BuyActivity">
-            >
+            android:parentActivityName=".DeliveryActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

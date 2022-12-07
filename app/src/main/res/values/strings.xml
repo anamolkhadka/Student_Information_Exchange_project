@@ -123,5 +123,6 @@
     <string name="contact_number_text">Contact Number</string>
     <string name="submit_text2">Submit</string>
     <string name="advertisement_request_form_text">Advertisement request form</string>
+    <string name="search_for_events_components_text">Search for events, components</string>
 
 </resources>
