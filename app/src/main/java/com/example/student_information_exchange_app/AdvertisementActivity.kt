@@ -10,7 +10,7 @@ class AdvertisementActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_advertisement)
-
+        title="Request for placing your Ads"
         configureSubmitButton()
 
     }
