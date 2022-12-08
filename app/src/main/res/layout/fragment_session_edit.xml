@@ -46,7 +46,7 @@
                     <RadioGroup
                         android:id="@+id/sas_rgroup"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"/>
+                        android:layout_height="100dp" />
                 </LinearLayout>
             </ScrollView>
 
@@ -68,10 +68,6 @@
                 android:layout_height="100dp"
                 android:layout_weight="1" />
         </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="100dp" />
 
         <TextView
             android:id="@+id/ms_head"

@@ -21,8 +21,11 @@ import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 
 class SessionRemoveFragment : Fragment() {
-    private lateinit var itemArrayList: ArrayList<SessionData>
     private var db = Firebase.firestore
+    private val collectionRef = db.collection("tutoring_sessions")
+    private lateinit var itemArrayList: ArrayList<SessionData>
+    private lateinit var indirList: java.util.ArrayList<Int>
+    private lateinit var docnames: java.util.ArrayList<String>
     private var user = Firebase.auth.currentUser
     private val email = user?.email.toString()
 
@@ -34,13 +37,14 @@ class SessionRemoveFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_session_remove, container, false)
 
         itemArrayList = arrayListOf()
+        indirList = arrayListOf()
+        docnames = arrayListOf()
         eventChangeListener(view)
         configureRemoveButton(view)
         return view
     }
     @SuppressLint("NotifyDataSetChanged")
     private fun eventChangeListener(v:View){
-        val collectionRef = db.collection("tutoring_sessions")
         collectionRef.addSnapshotListener{value,e ->
 
             if(e != null){
@@ -48,10 +52,13 @@ class SessionRemoveFragment : Fragment() {
                 return@addSnapshotListener
 
             }
-            for(doc in value!!) {
+            itemArrayList.clear()
+            docnames.clear()
+            for((idx, doc) in value!!.withIndex()) {
                 Log.d("Document","fetch succeed")
                 Log.d("document",doc.toString())
                 itemArrayList.add(doc.toObject<SessionData>())
+                docnames.add(idx, doc.id)
                 Log.d("myItemList",itemArrayList.toString())
             }
             setUp(v)
@@ -59,26 +66,47 @@ class SessionRemoveFragment : Fragment() {
     }
     private fun setUp(v:View){
         val group: RadioGroup =v.findViewById(R.id.ras_group)
+        val remove:Button = v.findViewById(R.id.rs_submit)
 
-        if(itemArrayList.toString()==""){
-            Toast.makeText(activity?.applicationContext,"No sessions exist", Toast.LENGTH_LONG).show()
-
-        }else{
-            for (item in itemArrayList) {
-                if(item.Host.equals(email)) {
-                    val radioButton = RadioButton(context)
-                    radioButton.text = item.Title
-                    group.addView(radioButton)
-                }
+        remove.isEnabled = false
+        indirList.clear()
+        group.removeAllViews()
+        var index = 0
+        var count = 0
+        for (item in itemArrayList) {
+            if (item.Host.equals(email)) {
+                val radioButton = RadioButton(context)
+                radioButton.text = item.Title
+                radioButton.id = count
+                count++
+                group.addView(radioButton)
+                indirList.add(index)
+                remove.isEnabled = true
+                break
             }
+            index++
         }
     }
     private fun configureRemoveButton(v: View) {
         val button: Button =v.findViewById(R.id.rs_submit)
         val group: RadioGroup =v.findViewById(R.id.ras_group)
-        if(group.isSelected) {
-            button.setOnClickListener {
-                Toast.makeText(activity?.applicationContext, "Removed", Toast.LENGTH_LONG).show()
+
+        button.setOnClickListener {
+            if(group.checkedRadioButtonId!=-1) {
+                val old_id=group.checkedRadioButtonId
+                val old_idx=indirList.get(old_id)
+                val name = docnames.get(old_idx)
+
+                collectionRef.document(name)
+                    .delete()
+                    .addOnSuccessListener {
+                        Log.d("Document deleted", ":Success")
+                        Toast.makeText(activity?.applicationContext, "Session removed", Toast.LENGTH_LONG).show()
+                    }
+                    .addOnFailureListener { e ->
+                        e.message?.let { Log.d("Document delete failed", it) }
+                    }
+
             }
         }
     }

@@ -1,7 +1,7 @@
 package com.example.student_information_exchange_app
 
 import android.os.Bundle
-import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class RatingActivity : AppCompatActivity() {
@@ -10,5 +10,10 @@ class RatingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_rating)
 
         title="Rate Prior Tutors"
+        configureRateButton()
+    }
+    private fun configureRateButton(){
+        var button:Button=findViewById(R.id.rate_button)
+        button.isEnabled=false
     }
 }

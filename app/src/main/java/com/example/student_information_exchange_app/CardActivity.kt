@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import androidx.core.view.get
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -23,6 +24,7 @@ class CardActivity : AppCompatActivity(){
     private val collectionRef = db.collection("transaction_mediums")
     private lateinit var itemArrayList: ArrayList<CardData>
     private lateinit var indirList:ArrayList<Int>
+    private lateinit var docnames:ArrayList<String>
     private val user = Firebase.auth.currentUser
     private val email = user?.email.toString()
     private lateinit var provider: String
@@ -38,7 +40,10 @@ class CardActivity : AppCompatActivity(){
         title="Add or Remove Cards"
         itemArrayList = arrayListOf()
         indirList= arrayListOf()
+        docnames= arrayListOf()
         configureSubmitButton()
+        configureRemoveButton()
+        eventChangeListener()
     }
     //Sets up the submit button with firebase
     private fun configureSubmitButton(){
@@ -72,6 +77,28 @@ class CardActivity : AppCompatActivity(){
             }
         }
     }
+    private fun configureRemoveButton(){
+        val submit:Button=findViewById(R.id.rc_remove)
+        val group: RadioGroup =findViewById(R.id.rc_group)
+
+        submit.setOnClickListener {
+            if(group.checkedRadioButtonId!=-1) {
+                val old_id=group.checkedRadioButtonId
+                val old_idx=indirList.get(old_id)
+                val name = docnames.get(old_idx)
+
+                collectionRef.document(name)
+                    .delete()
+                    .addOnSuccessListener {
+                        Log.d("Document deleted", ":Success")
+                        Toast.makeText(applicationContext, "Card removed", Toast.LENGTH_LONG).show()
+                    }
+                    .addOnFailureListener { e ->
+                        e.message?.let { Log.d("Document delete failed", it) }
+                    }
+            }
+        }
+    }
     private fun uploadItem(HOST:String,PROVIDER:String,TYPE:String,NUM:String,CSV:String,EXPIRY:String){
         val item = hashMapOf(
             "Host" to HOST,
@@ -79,7 +106,8 @@ class CardActivity : AppCompatActivity(){
             "Type" to TYPE,
             "Num" to NUM,
             "Csv" to CSV,
-            "Expiry" to EXPIRY
+            "Expiry" to EXPIRY,
+            "Medium" to "Card"
         )
         val formatter = SimpleDateFormat("yyyy_mm_dd_hh_mm_ss", Locale.getDefault())
         val currentTime = Date()
@@ -96,20 +124,23 @@ class CardActivity : AppCompatActivity(){
         Toast.makeText(applicationContext,"Card added", Toast.LENGTH_LONG).show()
     }
     @SuppressLint("NotifyDataSetChanged")
-    private fun eventChangeListener(v: View){
+    private fun eventChangeListener(){
         val collectionRef = db.collection("transaction_mediums")
-        collectionRef.addSnapshotListener{value,e ->
+        collectionRef.addSnapshotListener { value, e ->
 
-            if(e != null){
-                Log.d("FireStore error",e.message.toString())
+            if (e != null) {
+                Log.d("FireStore error", e.message.toString())
                 return@addSnapshotListener
 
             }
-            for(doc in value!!) {
-                Log.d("Document","fetch succeed")
-                Log.d("document",doc.toString())
+            itemArrayList.clear()
+            docnames.clear()
+            for((idx, doc) in value!!.withIndex()) {
+                Log.d("Document", "fetch succeed")
+                Log.d("document", doc.toString())
+                Log.d("myItemList", itemArrayList.toString())
                 itemArrayList.add(doc.toObject<CardData>())
-                Log.d("myItemList",itemArrayList.toString())
+                docnames.add(idx, doc.id)
             }
             setUp()
         }
@@ -118,24 +149,24 @@ class CardActivity : AppCompatActivity(){
         val group:RadioGroup=findViewById(R.id.rc_group)
         val remove:Button=findViewById(R.id.rc_remove)
 
-        if(itemArrayList.size==0){
-            Toast.makeText(applicationContext,"No sessions exist", Toast.LENGTH_LONG).show()
-            remove.isEnabled=false
-        }else{
-            remove.isEnabled=true
-            var index = 0
-            var count = 0
-            for (item in itemArrayList) {
-                if(item.Host.equals(email)) {
-                    val radioButton = RadioButton(this)
-                    radioButton.text = item.Type
-                    radioButton.id = count
-                    count++
-                    group.addView(radioButton)
-                    indirList.add(index)
-                }
-                index++
+        remove.isEnabled = false
+        indirList.clear()
+        group.removeAllViews()
+        var index = 0
+        var count = 0
+        for (item in itemArrayList) {
+            if (item.Host.equals(email) && item.Medium.equals("Card")){
+                val radioButton = RadioButton(this)
+                val last_four = item.Num.substring(item.Num.length-4)
+                radioButton.text = "${item.Provider} ${item.Type} ############$last_four"
+                radioButton.id = count
+                count++
+                group.addView(radioButton)
+                indirList.add(index)
+                remove.isEnabled = true
+                break
             }
+            index++
         }
     }
 }

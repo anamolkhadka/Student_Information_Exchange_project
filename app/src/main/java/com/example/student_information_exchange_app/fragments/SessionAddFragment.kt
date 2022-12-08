@@ -102,7 +102,6 @@ class SessionAddFragment : Fragment() {
             "Capacity" to CAPACITY,
             "Location" to LOCATION,
             "Description" to DESCRIPTION,
-            "Rating" to "0"
         )
         val formatter = SimpleDateFormat("yyyy_mm_dd_hh_mm_ss", Locale.getDefault())
         val currentTime = Date()

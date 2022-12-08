@@ -24,7 +24,6 @@ class TutorOptionsFragment : Fragment() {
     private lateinit var itemArrayList: ArrayList<BankData>
     private val user = Firebase.auth.currentUser
     private val email = user?.email.toString()
-    var cond:Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,23 +33,23 @@ class TutorOptionsFragment : Fragment() {
         val view:View=inflater.inflate(R.layout.fragment_tutor_options, container, false)
 
         itemArrayList = arrayListOf()
-        while(cond){
-        }
-        cond=checkPM()
-        if(cond){
-            disableSessionButton(view)
-            disableAnnouncementButton(view)
-            disableRequestsButton(view)
-        }else{
-            enableSessionButton(view)
-            enableAnnouncementButton(view)
-            enableRequestsButton(view)
-        }
-        configureSessionButton(view)
-        configureAnnouncementButton(view)
-        configureRequestsButton(view)
-        configureBankButton(view)
+        eventChangeListener(view)
         return view
+    }
+    private fun setUp(v:View){
+        if(checkPM()){
+            disableSessionButton(v)
+            disableAnnouncementButton(v)
+            disableRequestsButton(v)
+        }else{
+            enableSessionButton(v)
+            enableAnnouncementButton(v)
+            enableRequestsButton(v)
+        }
+        configureSessionButton(v)
+        configureAnnouncementButton(v)
+        configureRequestsButton(v)
+        configureBankButton(v)
     }
     //Disables the session button
     private fun disableSessionButton(v: View) {
@@ -116,7 +115,6 @@ class TutorOptionsFragment : Fragment() {
     }
     @SuppressLint("NotifyDataSetChanged")
     private fun eventChangeListener(v: View){
-        val collectionRef = db.collection("transaction_mediums")
         collectionRef.addSnapshotListener{value,e ->
 
             if(e != null){
@@ -129,8 +127,8 @@ class TutorOptionsFragment : Fragment() {
                 Log.d("document",doc.toString())
                 itemArrayList.add(doc.toObject<BankData>())
                 Log.d("myItemList",itemArrayList.toString())
-                cond=true
             }
+            setUp(v)
         }
     }
     private fun checkPM(): Boolean {

@@ -119,6 +119,14 @@
     <string name="modify_text">Modify</string>
     <string name="sas_text">Select a Session</string>
     <string name="select_text">Select</string>
+    <string name="browse_test">Browse Sessions</string>
+    <string name="overview">Overview</string>
+    <string name="rsvp_text">RSVP Session</string>
+    <string name="drop_text">Drop Enrolled Sessions</string>
+    <string name="prior_text">Select Prior Session</string>
+    <string name="rate_title">Issue a Rating</string>
+    <string name="rate_text">Rate</string>
+    <string name="rq_text">Requests will appear here</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

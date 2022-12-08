@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import androidx.core.view.get
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -21,6 +22,7 @@ class BankActivity : AppCompatActivity(){
     private val collectionRef = db.collection("transaction_mediums")
     private lateinit var itemArrayList: ArrayList<BankData>
     private lateinit var indirList:ArrayList<Int>
+    private lateinit var docnames:ArrayList<String>
     private val user = Firebase.auth.currentUser
     private val email = user?.email.toString()
     private lateinit var provider:String
@@ -35,7 +37,10 @@ class BankActivity : AppCompatActivity(){
         title="Link or Unlink Banks"
         itemArrayList = arrayListOf()
         indirList= arrayListOf()
+        docnames= arrayListOf()
         configureSubmitButton()
+        configureRemoveButton()
+        eventChangeListener()
     }
     //Sets up the submit button with firebase
     private fun configureSubmitButton(){
@@ -56,10 +61,35 @@ class BankActivity : AppCompatActivity(){
                     Toast.makeText(applicationContext,"Please provide a valid 12-digit account number", Toast.LENGTH_LONG).show()
                 }
             }else{
-                val user = Firebase.auth.currentUser
-                uploadItem(user?.email.toString(),provider,type,routing,account)
+                uploadItem(email,provider,type,routing,account)
                 findViewById<TextView>(R.id.lb_routing_text).text=""
                 findViewById<TextView>(R.id.lb_account_text).text=""
+            }
+        }
+    }
+    private fun configureRemoveButton(){
+        val submit:Button=findViewById(R.id.ub_remove)
+        val group: RadioGroup =findViewById(R.id.ub_group)
+
+        submit.setOnClickListener {
+            if(group.checkedRadioButtonId!=-1) {
+                val old_id=group.checkedRadioButtonId
+                val old_idx=indirList.get(old_id)
+                val name = docnames.get(old_idx)
+
+                collectionRef.document(name)
+                    .delete()
+                    .addOnSuccessListener {
+                        Log.d("Document deleted", ":Success")
+                        Toast.makeText(
+                            applicationContext,
+                            "Account unlinked",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                    .addOnFailureListener { e ->
+                        e.message?.let { Log.d("Document delete failed", it) }
+                    }
             }
         }
     }
@@ -70,6 +100,7 @@ class BankActivity : AppCompatActivity(){
             "Type" to TYPE,
             "Routing" to ROUTING,
             "Account" to ACCOUNT,
+            "Medium" to "Bank"
         )
         val formatter = SimpleDateFormat("yyyy_mm_dd_hh_mm_ss", Locale.getDefault())
         val currentTime = Date()
@@ -86,46 +117,47 @@ class BankActivity : AppCompatActivity(){
         Toast.makeText(applicationContext,"Account linked", Toast.LENGTH_LONG).show()
     }
     @SuppressLint("NotifyDataSetChanged")
-    private fun eventChangeListener(v: View){
-        val collectionRef = db.collection("transaction_mediums")
+    private fun eventChangeListener(){
         collectionRef.addSnapshotListener{value,e ->
-
             if(e != null){
                 Log.d("FireStore error",e.message.toString())
                 return@addSnapshotListener
 
             }
-            for(doc in value!!) {
+            itemArrayList.clear()
+            docnames.clear()
+            for((idx, doc) in value!!.withIndex()) {
                 Log.d("Document","fetch succeed")
                 Log.d("document",doc.toString())
-                itemArrayList.add(doc.toObject<BankData>())
                 Log.d("myItemList",itemArrayList.toString())
+                itemArrayList.add(doc.toObject<BankData>())
+                docnames.add(idx, doc.id)
             }
             setUp()
         }
     }
-    private fun setUp(){
-        val group: RadioGroup =findViewById(R.id.ub_group)
-        val remove:Button=findViewById(R.id.ub_remove)
+    private fun setUp() {
+        val group: RadioGroup = findViewById(R.id.ub_group)
+        val remove: Button = findViewById(R.id.ub_remove)
 
-        if(itemArrayList.size==0){
-            Toast.makeText(applicationContext,"No banks exist", Toast.LENGTH_LONG).show()
-            remove.isEnabled=false
-        }else{
-            remove.isEnabled=true
-            var index = 0
-            var count = 0
-            for (item in itemArrayList) {
-                //if(item.Host.equals(email)) {
-                    val radioButton = RadioButton(this)
-                    radioButton.text = item.Type
-                    radioButton.id = count
-                    count++
-                    group.addView(radioButton)
-                    indirList.add(index)
-                //}
-                index++
+        remove.isEnabled = false
+        indirList.clear()
+        group.removeAllViews()
+        var index = 0
+        var count = 0
+        for (item in itemArrayList) {
+            if (item.Host.equals(email) && item.Medium.equals("Bank")) {
+                val radioButton = RadioButton(this)
+                val last_four = item.Account.substring(item.Account.length-4)
+                radioButton.text = "$last_four ${item.Type} ########${item.Account}"
+                radioButton.id = count
+                count++
+                group.addView(radioButton)
+                indirList.add(index)
+                remove.isEnabled = true
+                break
             }
+            index++
         }
     }
 }
