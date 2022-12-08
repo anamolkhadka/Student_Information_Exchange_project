@@ -106,7 +106,7 @@
     <string name="desc_text">Description</string>
     <string name="p_text">Price</string>
     <string name="date_text">Date (mm/dd)</string>
-    <string name="subject_text">Subject</string>
+    <string name="sbject_text">Subject</string>
     <string name="location_text">Location</string>
     <string name="start_time_text">Start Time</string>
     <string name="duration_text">Duration</string>
@@ -131,4 +131,29 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="choose_pickup_or_delivery_text">Choose Pickup Or Delivery</string>
+    <string name="pick_up_text">Pick Up</string>
+    <string name="delivery_text">Delivery</string>
+    <string name="confirm_address_text">Confirm Address</string>
+    <string name="enter_your_delivery_address_text">Enter Your Delivery Address</string>
+    <string name="enter_street_address_text">Enter Street Address</string>
+    <string name="enter_city_state_text">Enter City, State</string>
+    <string name="enter_zip_code_text">Enter Zip Code</string>
+    <string name="proceed_to_payment_text">Proceed to Payment</string>
+    <string name="pickup_location_text">Pickup Location :</string>
+    <string name="_416_yates_street_text">416 Yates Street,</string>
+    <string name="arlington_tx_text">Arlington, TX</string>
+    <string name="_76010_text">76010</string>
+    <string name="to_text">To:</string>
+    <string name="email_address_text">Email Address</string>
+    <string name="subject_text">Subject:</string>
+    <string name="enter_email_heading_text">Enter email heading</string>
+    <string name="message_string">Message:</string>
+    <string name="type_your_message_here_text">Type your message here.....</string>
+    <string name="send_email_text">SEND EMAIL</string>
+    <string name="business_name_text">Business Name</string>
+    <string name="contact_number_text">Contact Number</string>
+    <string name="submit_text2">Submit</string>
+    <string name="advertisement_request_form_text">Advertisement request form</string>
+
 </resources>

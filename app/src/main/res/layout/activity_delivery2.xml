@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeliveryActivity2">
+
+    <TextView
+        android:id="@+id/Delivery_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/enter_your_delivery_address_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/purple"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Address_1"
+        android:layout_width="300dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Delivery_info_text"
+        android:hint="@string/enter_street_address_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Address_1_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColorHint="#616161"
+            android:textSize="12sp"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Address_2"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Address_1"
+        android:hint="@string/enter_city_state_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Address_2_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColorHint="#616161"
+            android:textSize="12sp"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/zip_code"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Address_2"
+        android:hint="@string/enter_zip_code_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/zip_code_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#616161"
+            android:textSize="12sp"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/confirm_address_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_address_text"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/zip_code"
+        app:layout_constraintTop_toBottomOf="@id/zip_code"/>
+
+    <TextView
+        android:id="@+id/delivery_address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        app:layout_constraintStart_toStartOf="@+id/zip_code"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_address_button"/>
+
+    <TextView
+        android:id="@+id/street_address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/delivery_address_text"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_address_text" />
+
+    <TextView
+        android:id="@+id/city_state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/street_address_text"
+        app:layout_constraintTop_toBottomOf="@+id/street_address_text" />
+
+    <TextView
+        android:id="@+id/zipcode_output_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/city_state_text"
+        app:layout_constraintTop_toBottomOf="@+id/city_state_text" />
+
+    <Button
+        android:id="@+id/proceed_to_payment_button"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/proceed_to_payment_text"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_address_button"
+        app:layout_constraintTop_toBottomOf="@+id/zipcode_output_text" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".InformationExchangeActivity">
+
+    <Button
+        android:id="@+id/news_button"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_infoex_background"
+        android:gravity="center"
+        android:text="News"
+        android:textColor="#ffff"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:id="@+id/research_button"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_infoex_background"
+        android:gravity="center"
+        android:text="Research"
+        android:textColor="#ffff"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="135dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:id="@+id/Campus_life_button"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_infoex_background"
+        android:gravity="center"
+        android:text="Campus Life"
+        android:textColor="#ffff"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id= "@+id/advertisement_ad"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/advertisement"
+        app:layout_constraintTop_toBottomOf="@+id/Campus_life_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="90dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

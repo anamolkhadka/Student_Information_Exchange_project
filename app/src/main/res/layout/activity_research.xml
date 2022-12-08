@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResearchActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Image_research1"
+            android:layout_width="500dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/research_pic2" />
+
+
+        />
+
+        <TextView
+            android:id="@+id/Text_research_heading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Image_research1"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:maxLines="2"
+            android:padding="3dp"
+            android:text="PACCP: Price-based, Quality-of-Service (QoS) Aware Transport Protocols!!"
+            android:textColor="@color/indigo_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This project goal is to develop a highly scalable, readily implementable, price-aware, host-based flow control solution..."
+            android:layout_below="@id/Text_research_heading1"
+            android:id="@+id/subtitle_research1"/>
+        <Button
+            android:id="@+id/ViewDetailsResearch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="View Details"
+            android:textAllCaps="false"
+            android:textColor="@color/indigo_dark"
+            android:textSize="10sp"
+            android:layout_below="@id/subtitle_research1"
+            android:layout_marginStart="280dp"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Image_research2"
+            android:layout_width="500dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="360dp"
+            android:scaleType="centerCrop"
+            android:padding="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/research_pic1" />
+
+
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_research_heading2"
+            android:layout_below="@+id/Image_research2"
+            android:text="Data De-duplication in Distributed Object Storage Systems Used for Cold Storage!!"
+            android:textColor="@color/indigo_dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="3dp"
+            android:maxLines="2"
+            android:layout_margin="3dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This project goal is to study new technologies to enhance the storage efficiency in modern storage systems...."
+            android:layout_below="@id/Text_research_heading2"
+            android:id="@+id/subtitle_research2"/>
+        <Button
+            android:id="@+id/ViewDetailsResearch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="View Details"
+            android:textAllCaps="false"
+            android:textColor="@color/indigo_dark"
+            android:textSize="10sp"
+            android:layout_below="@id/subtitle_research2"
+            android:layout_marginStart="280dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

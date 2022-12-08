@@ -3,6 +3,7 @@ package com.example.student_information_exchange_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Email
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
@@ -29,6 +30,10 @@ class HomePageDashboardActivity : AppCompatActivity() {
         configureBuyAndSellButton()
         configureTutoringButton()
         configurePaymentsButton()
+        configureInfoex()
+        configureFormclub()
+        configureMessage()
+        configureAdvertisement()
 
     }
     //Sets up top bar with a name (enables back bars)
@@ -93,5 +98,34 @@ class HomePageDashboardActivity : AppCompatActivity() {
         }
     }
 
+    private fun configureInfoex() {
+        val InfoExButton: Button = findViewById(R.id.dashboard_infoExchange_button)
+        InfoExButton.setOnClickListener {
+            val InfoExPage = Intent(this,InformationExchangeActivity::class.java)
+            startActivity(InfoExPage)
+        }
+    }
+    private fun configureFormclub() {
+        val FormClubBttn: Button = findViewById(R.id.dashboard_formClub_button)
+        FormClubBttn.setOnClickListener {
+            val FormclubPage = Intent(this,FormclubActivity::class.java)
+            startActivity(FormclubPage)
+        }
+    }
 
+    private fun configureMessage(){
+        val button:Button = findViewById(R.id.dashboard_chat_button)
+        button.setOnClickListener{
+            val messagePage = Intent(this,EmailActivity::class.java)
+            startActivity(messagePage)
+        }
+    }
+
+    private fun configureAdvertisement(){
+        val button:Button = findViewById(R.id.dashboard_advertisement_button)
+        button.setOnClickListener{
+            val adPage = Intent(this,AdvertisementActivity::class.java)
+            startActivity(adPage)
+        }
+    }
 }

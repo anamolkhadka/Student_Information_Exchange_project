@@ -109,21 +109,21 @@ class BankActivity : AppCompatActivity(){
         val remove:Button=findViewById(R.id.ub_remove)
 
         if(itemArrayList.size==0){
-            Toast.makeText(applicationContext,"No sessions exist", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext,"No banks exist", Toast.LENGTH_LONG).show()
             remove.isEnabled=false
         }else{
             remove.isEnabled=true
             var index = 0
             var count = 0
             for (item in itemArrayList) {
-                if(item.Host.equals(email)) {
+                //if(item.Host.equals(email)) {
                     val radioButton = RadioButton(this)
                     radioButton.text = item.Type
                     radioButton.id = count
                     count++
                     group.addView(radioButton)
                     indirList.add(index)
-                }
+                //}
                 index++
             }
         }

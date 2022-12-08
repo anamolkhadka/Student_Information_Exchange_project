@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CampusLifeActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Image_campusLife"
+            android:layout_width="500dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/campus_life2" />
+
+
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_CampusLife_heading1"
+            android:layout_below="@+id/Image_campusLife"
+            android:text="HEALTH AND RECREATION!!"
+            android:textColor="@color/indigo_dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="3dp"
+            android:maxLines="2"
+            android:layout_margin="3dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From sport clubs to counseling and psychological services, we want our students to maintain a healthy lifestyle....."
+            android:layout_below="@id/Text_CampusLife_heading1"
+            android:id="@+id/subtitle_CampusLife1"/>
+
+        <Button
+            android:id="@+id/ViewDetails_bttnCl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="View Details"
+            android:textAllCaps="false"
+            android:textColor="@color/indigo_dark"
+            android:textSize="10sp"
+            android:layout_below="@id/subtitle_CampusLife1"
+            android:layout_marginStart="280dp"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/Image_CampusLife2"
+        android:layout_width="500dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="360dp"
+        android:scaleType="centerCrop"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/campus_life1" />
+
+
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_CampusLife_heading2"
+        android:layout_below="@+id/Image_CampusLife2"
+        android:text="ACTIVITIES AND ORGANIZATIONS!!"
+        android:textColor="@color/indigo_dark"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="3dp"
+        android:maxLines="2"
+        android:layout_margin="3dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This University offers many extracurricular activities and programs for you to explore....."
+        android:layout_below="@id/Text_CampusLife_heading2"
+        android:id="@+id/subtitle_CampusLife2"/>
+    <Button
+        android:id="@+id/ViewDetails_bttnCL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:text="View Details"
+        android:textAllCaps="false"
+        android:textColor="@color/indigo_dark"
+        android:textSize="10sp"
+        android:layout_below="@id/subtitle_CampusLife2"
+        android:layout_marginStart="280dp"
+        />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

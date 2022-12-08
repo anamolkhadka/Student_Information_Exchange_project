@@ -119,6 +119,17 @@
             app:layout_constraintEnd_toEndOf="@+id/cost_of_product_text"
             app:layout_constraintTop_toBottomOf="@+id/sales_tax_id" />
 
+        <Button
+            android:id="@+id/choose_pickup_delivery_button"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/choose_pickup_or_delivery_text"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total_amount" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

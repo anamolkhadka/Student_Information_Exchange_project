@@ -22,6 +22,140 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".AdvertisementActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EmailActivity"
+            android:exported="false"
+            android:parentActivityName=".HomePageDashboardActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PickupActivity"
+            android:exported="false"
+            android:parentActivityName=".BuyActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DeliveryActivity2"
+            android:exported="false"
+            android:parentActivityName=".BuyActivity">
+            >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DeliveryActivity"
+            android:exported="false"
+            android:parentActivityName=".BuyActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AboutClub3Activity"
+            android:exported="false"
+            android:parentActivityName=".JoinClubActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AboutClub2Activity"
+            android:exported="false"
+            android:parentActivityName=".JoinClubActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AboutClub1Activity"
+            android:exported="false"
+            android:parentActivityName=".JoinClubActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".JoinClubActivity"
+            android:exported="false"
+            android:parentActivityName=".FormclubActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CreateClubActivity"
+            android:exported="false"
+            android:parentActivityName=".FormclubActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".FormclubActivity"
+            android:exported="false"
+            android:parentActivityName=".HomePageDashboardActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewDetailsResearch2Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewDetailsResearch1Activity"
+            android:exported="false"
+            android:parentActivityName=".InformationExchangeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".InformationExchangeActivity"
+            android:exported="false"
+            android:parentActivityName=".HomePageDashboardActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewDetailsCL2Acitvity"
+            android:exported="false"
+            android:parentActivityName=".InformationExchangeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewDetailsCL1Activity"
+            android:exported="false"
+            android:parentActivityName=".InformationExchangeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CampusLifeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".TutoringRequestActivity"
             android:exported="false"
             android:parentActivityName=".TutoringActivity">
@@ -65,6 +199,34 @@
             android:name=".TutoringActivity"
             android:exported="false"
             android:parentActivityName=".HomePageDashboardActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewDetailsNews2Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ResearchActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewDetailNewsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NewsActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

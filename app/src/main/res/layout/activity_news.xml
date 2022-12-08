@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Image_news"
+            android:layout_width="500dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/news_pic" />
+
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_News_heading"
+            android:layout_below="@+id/Image_news"
+            android:text="Netherlands knocks off USMNT in World Cup!!"
+            android:textColor="@color/indigo_dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="3dp"
+            android:maxLines="2"
+            android:layout_margin="3dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOHA, Qatar — The U.S. men are heading home, stopped short of the World Cup quarterfinals again...."
+            android:layout_below="@id/Text_News_heading"
+            android:id="@+id/subtitle_news"/>
+        <Button
+            android:id="@+id/ViewDetails_bttn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="View Details"
+            android:textAllCaps="false"
+            android:textColor="@color/indigo_dark"
+            android:textSize="10sp"
+            android:layout_below="@id/subtitle_news"
+            android:layout_marginStart="280dp"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Image_news2"
+            android:layout_width="500dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="360dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/news_pic2" />
+
+
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_News_heading2"
+            android:layout_below="@+id/Image_news2"
+            android:text="Gas prices are now lower than before Russia's invasion of Ukraine!!"
+            android:textColor="@color/indigo_dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="3dp"
+            android:maxLines="2"
+            android:layout_margin="3dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Americans are now paying less for gasoline than they did before Russia invaded Ukraine in February as fuel prices continue...."
+            android:layout_below="@id/Text_News_heading2"
+            android:id="@+id/subtitle_news2"/>
+        <Button
+            android:id="@+id/ViewDetails_bttn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="View Details"
+            android:textAllCaps="false"
+            android:textColor="@color/indigo_dark"
+            android:textSize="10sp"
+            android:layout_below="@id/subtitle_news2"
+            android:layout_marginStart="280dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
