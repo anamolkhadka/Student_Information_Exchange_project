@@ -1,15 +1,30 @@
 package com.example.student_information_exchange_app.fragments
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.RadioButton
+import android.widget.Toast
 import com.example.student_information_exchange_app.*
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
+import com.google.firebase.ktx.Firebase
+import java.util.ArrayList
 
 class TutorOptionsFragment : Fragment() {
+    private var db = Firebase.firestore
+    private val collectionRef = db.collection("transaction_mediums")
+    private lateinit var itemArrayList: ArrayList<BankData>
+    private val user = Firebase.auth.currentUser
+    private val email = user?.email.toString()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -17,20 +32,24 @@ class TutorOptionsFragment : Fragment() {
     ): View? {
         val view:View=inflater.inflate(R.layout.fragment_tutor_options, container, false)
 
-        if(false){
-            disableSessionButton(view)
-            disableAnnouncementButton(view)
-            disableRequestsButton(view)
-        }else{
-            enableSessionButton(view)
-            enableAnnouncementButton(view)
-            enableRequestsButton(view)
-        }
-        configureSessionButton(view)
-        configureAnnouncementButton(view)
-        configureRequestsButton(view)
-        configureBankButton(view)
+        itemArrayList = arrayListOf()
+        eventChangeListener(view)
         return view
+    }
+    private fun setUp(v:View){
+        if(checkPM()){
+            disableSessionButton(v)
+            disableAnnouncementButton(v)
+            disableRequestsButton(v)
+        }else{
+            enableSessionButton(v)
+            enableAnnouncementButton(v)
+            enableRequestsButton(v)
+        }
+        configureSessionButton(v)
+        configureAnnouncementButton(v)
+        configureRequestsButton(v)
+        configureBankButton(v)
     }
     //Disables the session button
     private fun disableSessionButton(v: View) {
@@ -93,5 +112,33 @@ class TutorOptionsFragment : Fragment() {
             val page = Intent(activity, BankActivity::class.java)
             startActivity(page)
         }
+    }
+    @SuppressLint("NotifyDataSetChanged")
+    private fun eventChangeListener(v: View){
+        collectionRef.addSnapshotListener{value,e ->
+
+            if(e != null){
+                Log.d("FireStore error",e.message.toString())
+                return@addSnapshotListener
+
+            }
+            for(doc in value!!) {
+                Log.d("Document","fetch succeed")
+                Log.d("document",doc.toString())
+                itemArrayList.add(doc.toObject<BankData>())
+                Log.d("myItemList",itemArrayList.toString())
+            }
+            setUp(v)
+        }
+    }
+    private fun checkPM(): Boolean {
+        if(itemArrayList.size!=0){
+            for (item in itemArrayList) {
+                if(item.Host.equals(email)) {
+                    return false
+                }
+            }
+        }
+        return true
     }
 }

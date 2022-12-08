@@ -1,7 +1,7 @@
 package com.example.student_information_exchange_app
 
 import android.os.Bundle
-import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class RatingActivity : AppCompatActivity() {
@@ -9,22 +9,11 @@ class RatingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rating)
 
-        configureTopBar()
+        title="Rate Prior Tutors"
+        configureRateButton()
     }
-    //Sets up top bar with a name and back arrow
-    private fun configureTopBar(){
-        val display=supportActionBar
-        display?.title="Rate Prior Tutors"
-        display?.setDisplayHomeAsUpEnabled(true)
-    }
-    //Goes back to previous page when back arrow is pressed
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
-            android.R.id.home -> {
-                finish()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
+    private fun configureRateButton(){
+        var button:Button=findViewById(R.id.rate_button)
+        button.isEnabled=false
     }
 }

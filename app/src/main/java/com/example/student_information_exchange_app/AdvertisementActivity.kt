@@ -13,7 +13,6 @@ class AdvertisementActivity : AppCompatActivity() {
         setContentView(R.layout.activity_advertisement)
         title="Request for placing your Ads"
         configureSubmitButton()
-
     }
 
     private fun configureSubmitButton(){

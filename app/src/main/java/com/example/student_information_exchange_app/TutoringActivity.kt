@@ -15,28 +15,12 @@ class TutoringActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutoring)
 
-        configureTopBar()
+        title="Tutoring Services"
         configureViewPager()
-    }
-    //Sets up top bar with a name and back arrow
-    private fun configureTopBar(){
-        val display=supportActionBar
-        display?.title="Tutoring Services"
-        display?.setDisplayHomeAsUpEnabled(true)
-    }
-    //Goes back to previous page when back arrow is pressed
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
-            android.R.id.home -> {
-                finish()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
     }
     //Sets up the viewpager and its elements
     private fun configureViewPager(){
-        val tabLayout:TabLayout=findViewById(R.id.tabLayout)
+        val tabLayout:TabLayout=findViewById(R.id.tutor_tabs)
         val viewPager:ViewPager2 =findViewById(R.id.ts_pager)
         val person=ContextCompat.getDrawable(this, R.drawable.person_icon)
         val cap=ContextCompat.getDrawable(this, R.drawable.grad_icon)

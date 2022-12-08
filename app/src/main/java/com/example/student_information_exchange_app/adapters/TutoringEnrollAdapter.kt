@@ -4,10 +4,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.student_information_exchange_app.fragments.StudentOptionsFragment
-import com.example.student_information_exchange_app.fragments.TutorOptionsFragment
+import com.example.student_information_exchange_app.fragments.EnrollJoinFragment
+import com.example.student_information_exchange_app.fragments.EnrollRemoveFragment
 
-class TutoringServiceAdapter(fragmentManager: FragmentManager,lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle){
+class TutoringEnrollAdapter(fragmentManager: FragmentManager,lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle){
     override fun getItemCount(): Int {
         return 2
     }
@@ -15,13 +15,13 @@ class TutoringServiceAdapter(fragmentManager: FragmentManager,lifecycle: Lifecyc
     override fun createFragment(position: Int): Fragment {
         return when(position){
             0->{
-                TutorOptionsFragment()
+                EnrollJoinFragment()
             }
             1->{
-                StudentOptionsFragment()
+                EnrollRemoveFragment()
             }
             else->{
-                TutorOptionsFragment()
+                EnrollJoinFragment()
             }
         }
 

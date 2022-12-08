@@ -15,6 +15,13 @@
         android:theme="@style/Theme.Student_Information_Exchange_app"
         tools:targetApi="31">
         <activity
+            android:name=".PurchaseDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".AdvertisementActivity"
             android:exported="false"
             android:parentActivityName=".HomePageDashboardActivity">
@@ -120,7 +127,7 @@
         <activity
             android:name=".InformationExchangeActivity"
             android:exported="false"
-            android:parentActivityName=".HomePageActivity">
+            android:parentActivityName=".HomePageDashboardActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -142,13 +149,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".TutoringRequestActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".CampusLifeActivity"
             android:exported="false">
             <meta-data
@@ -156,43 +156,49 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".TutoringRequestActivity"
+            android:exported="false"
+            android:parentActivityName=".TutoringActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".TutoringAnnouncementActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".TutoringActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".TutoringSessionActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".TutoringActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".RatingActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".TutoringActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".EnrollmentActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".TutoringActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".TutoringActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".PurchaseDetailsActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".HomePageDashboardActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -261,7 +267,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
@@ -285,28 +290,32 @@
         </activity>
         <activity
             android:name=".BankActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".PaymentActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".CardActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".PaymentActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".PaymentActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".HomePageDashboardActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".RefundActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".PaymentActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
