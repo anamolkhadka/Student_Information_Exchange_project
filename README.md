@@ -17,6 +17,6 @@ Our team has developed an android application or to help the university students
 - Search: You should be able to search for events or items.
 - Advertisements: System should provide advertising space (e.g. Local subway store offers specials or coupons to members). This could be a source of revenue from the app.
 
-## App 
+## App Gif
 
 ![SIE App Gif](https://github.com/anamolkhadka/Student_Information_Exchange_project/blob/master/SIE_Demo_gif2.gif)
