@@ -19,4 +19,4 @@ Our team has developed an android application or to help the university students
 
 ## App 
 
-[![SIE App gif](https://github.com/anamolkhadka/Student_Information_Exchange_project/SIE_Demo_gif.gif)]
+[![SIE App gif](https://github.com/anamolkhadka/Student_Information_Exchange_project/blob/master/SIE_Demo_gif.gif)]
