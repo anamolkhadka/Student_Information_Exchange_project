@@ -16,3 +16,7 @@ Our team has developed an android application or to help the university students
 - Information Exchange: Exchange information about any topic, of course appropriate and within legal boundaries of a university setting such as: job postings, company hiring, class information, tutoring service, attending graduate programs, conference information, job fairs, subleasing apartments, sharing rides, etc. (anything goes)
 - Search: You should be able to search for events or items.
 - Advertisements: System should provide advertising space (e.g. Local subway store offers specials or coupons to members). This could be a source of revenue from the app.
+
+## App 
+
+[![SIE App gif](https://github.com/anamolkhadka/Student_Information_Exchange_project/blob/main/SIE_Demo_gif.gif)]
