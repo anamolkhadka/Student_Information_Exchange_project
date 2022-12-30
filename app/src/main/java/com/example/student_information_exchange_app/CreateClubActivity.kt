@@ -44,7 +44,7 @@ class CreateClubActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(
                     applicationContext,
-                    "Your Form has been submitted to review, Please let us 2-3 businees days to review your application.",
+                    "Your Form has been submitted to review, Please let us 2-3 business days to review your application.",
                     Toast.LENGTH_LONG
                 ).show()
                 val nextPage = Intent(this,HomePageDashboardActivity::class.java)

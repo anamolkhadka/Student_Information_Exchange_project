@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Student Information Exchange</string>
+    <string name="app_name">Student\nConnection</string>
     <string name="sign_in">Sign in</string>
     <string name="email">Email</string>
     <string name="password_string">Password</string>
